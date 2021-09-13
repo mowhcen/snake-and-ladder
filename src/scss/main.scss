@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+
+    padding: 5vh 25vw;
+}
+
+:root {
+    --primary: #ffef78;
+}
+
+.container {
+    background-color: var(--primary);
+
+    width: 50vw;
+    height: 90vh;
+}

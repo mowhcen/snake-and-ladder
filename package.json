@@ -1,0 +1,25 @@
+{
+    "name": "snake-and-ladder",
+    "version": "1.0.0",
+    "description": "two player board game",
+    "main": "index.js",
+    "scripts": {
+        "watch": "npx mix watch",
+        "build": "npx mix --production"
+    },
+    "keywords": [],
+    "author": "mowhcen",
+    "license": "ISC",
+    "devDependencies": {
+        "browser-sync": "^2.27.5",
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "resolve-url-loader": "^4.0.0",
+        "sass": "^1.39.2",
+        "sass-loader": "^12.1.0"
+    },
+    "dependencies": {
+        "jQuery": "^1.7.4",
+        "jquery": "^3.6.0",
+        "laravel-mix": "^6.0.31"
+    }
+}
