@@ -1,0 +1,43 @@
+.board {
+    grid-column: board / -1;
+    grid-row: header-part / -1;
+    background-color: var(--primary);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    margin-left: 3vw;
+    height: 100vh;
+    width: 100vh;
+}
+
+.odd-cel {
+    font-family: inherit;
+    font-size: 0.8rem;
+    background-color: var(--cel-color-1);
+    text-align: end;
+    padding: 0.5rem 0.3rem;
+
+    &__number {
+        font-size: 0.8rem;
+        color: var(--cel-color-1);
+        background-color: var(--cel-color-2);
+        padding: 5%;
+        border-radius: 50%;
+    }
+}
+
+.even-cel {
+    font-family: inherit;
+    font-size: 0.8rem;
+    background-color: var(--cel-color-2);
+    text-align: end;
+    padding: 0.5rem 0.3rem;
+
+    &__number {
+        font-size: 0.8rem;
+        color: var(--cel-color-2);
+        background-color: var(--cel-color-1);
+        padding: 5%;
+        border-radius: 50%;
+    }
+}
