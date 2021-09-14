@@ -1,0 +1,33 @@
+.mead {
+    &__head {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-right: 2rem;
+        margin-bottom: -0.2rem;
+        border-radius: 50%;
+    }
+
+    &__bot {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-right: 2rem;
+        clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
+    }
+    &__color {
+        &--red {
+            background-color: var(--mead-color-red);
+        }
+
+        &--blue {
+            background-color: var(--mead-color-blue);
+        }
+
+        &--green {
+            background-color: var(--mead-color-green);
+        }
+
+        &--yellow {
+            background-color: var(--mead-color-yellow);
+        }
+    }
+}
