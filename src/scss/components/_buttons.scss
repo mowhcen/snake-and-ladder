@@ -1,0 +1,82 @@
+.get-player {
+    background-color: var(--secondary);
+    border: 1px solid var(--dark);
+    height: 2rem;
+    text-align: center;
+    width: 80%;
+    cursor: pointer;
+    box-shadow: var(--box-shadow-input);
+    font-size: 1.3rem;
+    font-family: inherit;
+    font-weight: 500;
+    color: var(--success);
+
+    &:focus-visible {
+        outline: none;
+        border: 2px solid var(--dark);
+    }
+}
+
+.dice {
+    grid-column: first/second;
+    grid-row: begin/ finish;
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--success);
+    margin: auto;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    border: 1px solid var(--dark);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+
+    &:active {
+        box-shadow: var(--box-shadow-press);
+    }
+}
+
+.reset-game {
+    grid-row: half / -1;
+    grid-column: third / -1;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    height: 2.5rem;
+    width: 6rem;
+    margin: auto;
+    border-radius: 5px;
+    color: var(--success);
+    background-color: var(--secondary);
+    border: 1px solid var(--dark);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+
+    &:active {
+        box-shadow: var(--box-shadow-press);
+    }
+}
+
+.start-button {
+    grid-column: first / second;
+    grid-row: begin / -1;
+    position: relative;
+    font-size: 1.3rem;
+    color: var(--success);
+    font-family: inherit;
+    height: 5rem;
+    width: 5rem;
+    margin: auto;
+    font-weight: 600;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    padding: 1rem 0.5rem;
+    border: 2px solid var(--dark);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+
+    &:active {
+        box-shadow: var(--box-shadow-press);
+    }
+}
