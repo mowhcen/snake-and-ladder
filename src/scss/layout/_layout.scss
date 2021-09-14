@@ -3,3 +3,42 @@
     grid-template-columns: repeat(2, [begin] 1fr) [board]2fr;
     grid-template-rows: [header-part]1fr [main-part]2fr [footer-part]1fr;
 }
+
+.header {
+    grid-column: begin / begin;
+    grid-row: header-part / main-part;
+}
+
+.initial-game {
+    display: grid;
+    grid-template-columns: [first] 1fr [second] 2fr [third]1fr;
+    grid-template-rows: [begin]1fr [half] 1fr;
+    gap: 0.5rem;
+}
+
+.initial-player {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 2rem;
+}
+
+.player-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mead-container {
+    grid-column: 2 / board;
+    grid-row: footer-part / -1;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.mead-contain {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
