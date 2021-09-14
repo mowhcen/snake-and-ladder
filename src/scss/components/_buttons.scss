@@ -5,7 +5,7 @@
     width: 3.5rem;
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--success);
+    color: var(--font-color);
     margin: auto;
     border-radius: 50%;
     background-color: var(--secondary);
@@ -28,7 +28,7 @@
     width: 6rem;
     margin: auto;
     border-radius: 5px;
-    color: var(--success);
+    color: var(--font-color);
     background-color: var(--secondary);
     border: 1px solid var(--shadow-color);
     box-shadow: var(--box-shadow);
@@ -44,7 +44,7 @@
     grid-row: begin / -1;
     position: relative;
     font-size: 1.3rem;
-    color: var(--success);
+    color: var(--font-color);
     font-family: inherit;
     height: 5rem;
     width: 5rem;

@@ -1,5 +1,5 @@
 .title {
-    color: var(--success);
+    color: var(--font-color);
 
     &--big {
         font-size: 3.5rem;
@@ -22,14 +22,14 @@
 .creator {
     font-size: 1rem;
     padding-left: 5rem;
-    color: var(--success);
+    color: var(--font-color);
 }
 
 .player-count {
     font-size: 2rem;
     font-family: inherit;
     margin: auto;
-    color: var(--success);
+    color: var(--font-color);
 }
 
 .turn-show {
@@ -39,7 +39,7 @@
     font-weight: 900;
     font-size: 4rem;
     margin: auto;
-    color: var(--success);
+    color: var(--font-color);
     background-color: var(--secondary);
     box-shadow: var(--box-shadow-input);
     padding: 1rem;
@@ -54,7 +54,7 @@
     font-size: 3.5rem;
     margin: auto;
     margin-left: 0;
-    color: var(--success);
+    color: var(--font-color);
 }
 
 .player-name {
@@ -66,7 +66,7 @@
     background-color: var(--secondary);
     box-shadow: var(--box-shadow-input);
     width: 75%;
-    color: var(--success);
+    color: var(--font-color);
     padding: 0.75rem;
 }
 
