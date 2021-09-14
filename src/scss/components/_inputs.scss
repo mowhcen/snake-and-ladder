@@ -18,3 +18,22 @@
         border: 2px solid var(--shadow-color);
     }
 }
+
+.get-player {
+    background-color: var(--secondary);
+    border: 1px solid var(--shadow-color);
+    height: 2rem;
+    text-align: center;
+    width: 80%;
+    cursor: pointer;
+    box-shadow: var(--box-shadow-input);
+    font-size: 1.3rem;
+    font-family: inherit;
+    font-weight: 500;
+    color: var(--success);
+
+    &:focus-visible {
+        outline: none;
+        border: 2px solid var(--shadow-color);
+    }
+}
