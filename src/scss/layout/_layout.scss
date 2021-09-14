@@ -1,0 +1,5 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, [begin] 1fr) [board]2fr;
+    grid-template-rows: [header-part]1fr [main-part]2fr [footer-part]1fr;
+}
