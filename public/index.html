@@ -4,14 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>snake and letter</title>
+    <title>snake and ladder</title>
 </head>
 
 <body>
     <div class="container">
-        snake adn letter
+        <div class="header">
+            <h1 class="title">Snake and Ladder</h1>
+            <h6 class="creator">Created by: mowhcen</h6>
+        </div>
+        <div class="initial-game">
+            <button class="start-button">Start</button>
+            <h6 class="count">Player count:</h6>
+            <input type="text" class="player-count">
+            <button class="reset-game">Reset Game</button>
+        </div>
+        <div class="board">
+        </div>
+        <div class="showing-turn">
+            <div class="turn-show">
+                Mohsen Turn
+            </div>
+            <h3 class="turn"> Turn</h3>
+            <button>Dice</button>
+            <div class="dice-show">
+                image of dice
+            </div>
+        </div>
+        <div class="initial-player">
+            <h3 class="get-player">Input players name</h3>
+            <input type="text">
+        </div>
+        <div id="red" class="player">red</div>
+        <div id="green" class="player">green</div>
+        <div id="yellow" class="player">yellow</div>
+        <div id="blue" class="player">blue</div>
     </div>
     <script src="./assets/js/bundle.js"></script>
 </body>
