@@ -1,0 +1,77 @@
+.title {
+    color: var(--success);
+
+    &--big {
+        font-size: 3.5rem;
+        font-weight: 900;
+        padding-left: 4rem;
+        padding-top: 2rem;
+    }
+
+    &--medium {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    &--small {
+        font-size: 1.5rem;
+        margin-top: 0.2rem;
+    }
+}
+
+.creator {
+    font-size: 1rem;
+    padding-left: 5rem;
+    color: var(--success);
+}
+
+.player-count {
+    font-size: 2rem;
+    font-family: inherit;
+    margin: auto;
+    color: var(--success);
+}
+
+.turn-show {
+    grid-column: first/third;
+    grid-row: finish / -1;
+    font-family: inherit;
+    font-weight: 900;
+    font-size: 4rem;
+    margin: auto;
+    color: var(--success);
+    background-color: var(--secondary);
+    box-shadow: var(--box-shadow-input);
+    padding: 1rem;
+    border-radius: 4rem;
+}
+
+.turn {
+    grid-column: third/-1;
+    grid-row: finish / -1;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin: auto;
+    margin-left: 0;
+    color: var(--success);
+}
+
+.player-name {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-top: 0.75rem;
+    margin-left: 0.5rem;
+    background-color: var(--secondary);
+    box-shadow: var(--box-shadow-input);
+    width: 75%;
+    color: var(--success);
+    padding: 0.75rem;
+}
+
+.showing-turn {
+    display: grid;
+    grid-template-columns: [first]1fr [second]1fr [third] 1fr;
+    grid-template-rows: [begin]1fr [finish]1fr;
+}
