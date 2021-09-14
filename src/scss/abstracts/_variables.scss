@@ -5,9 +5,11 @@
     --shadow-color: #2d2424;
     --white: #fff;
     --black: #000;
-    --box-shadow: 3px 3px 3px var(--dark), inset -1px -1px 2.5px var(--dark);
-    --box-shadow-press: 2px 2px 3px var(--dark), inset 1px 1px 2.5px var(--dark);
-    --box-shadow-input: inset 1px 1px 1px 1px var(--dark);
+    --box-shadow: 3px 3px 3px var(--shadow-color),
+        inset -1px -1px 2.5px var(--shadow-color);
+    --box-shadow-press: 2px 2px 3px var(--shadow-color),
+        inset 1px 1px 2.5px var(--shadow-color);
+    --box-shadow-input: inset 1px 1px 1px 1px var(--shadow-color);
 
     --cel-color-1: #b85c38;
     --cel-color-2: #e0c097;

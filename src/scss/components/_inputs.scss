@@ -3,18 +3,18 @@
     font-family: inherit;
     font-weight: 900;
     font-size: 3rem;
-    color: var(--dark);
+    color: var(--shadow-color);
     width: 4rem;
     height: 4rem;
     margin: auto;
     border-radius: 50%;
-    border: 1px solid var(--dark);
+    border: 1px solid var(--shadow-color);
     background-color: var(--secondary);
     box-shadow: var(--box-shadow-input);
     cursor: pointer;
 
     &:focus-visible {
         outline: none;
-        border: 2px solid var(--dark);
+        border: 2px solid var(--shadow-color);
     }
 }

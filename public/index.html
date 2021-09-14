@@ -17,35 +17,62 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1 class="title">Snake and Ladder</h1>
+            <h1 class="title title--big">Snake and Ladder</h1>
             <h6 class="creator">Created by: mowhcen</h6>
         </div>
         <div class="initial-game">
             <button class="start-button">Start</button>
-            <h6 class="count">Player count:</h6>
-            <input type="text" class="player-count">
+            <h6 class="player-count">Player count:</h6>
+            <input type="text" class="count">
             <button class="reset-game">Reset Game</button>
         </div>
         <div class="board">
         </div>
         <div class="showing-turn">
-            <div class="turn-show">
-                Mohsen Turn
-            </div>
-            <h3 class="turn"> Turn</h3>
-            <button>Dice</button>
+            <button class="dice">Dice</button>
             <div class="dice-show">
                 image of dice
             </div>
+            <div class="turn-show">
+                Mohsen
+            </div>
+            <h3 class="turn"> Turn</h3>
         </div>
         <div class="initial-player">
-            <h3 class="get-player">Input players name</h3>
-            <input type="text">
+            <h3 class="title title--medium">Input Players name:</h3>
+            <input class="get-player" type="text">
+            <h3 class="title title--small">Players</h3>
+            <div class="player-list">
+                <span class="player-name">1. Mohsen</span>
+                <figure class="mead__head mead__color--red"></figure>
+            </div>
+            <div class="player-list">
+                <span class="player-name">2. Javad</span>
+                <figure class="mead__head mead__color--green"></figure>
+            </div>
         </div>
-        <div id="red" class="player">red</div>
-        <div id="green" class="player">green</div>
-        <div id="yellow" class="player">yellow</div>
-        <div id="blue" class="player">blue</div>
+        <div class="mead-container">
+            <div id="red" class="mead-contain">
+                <figure class=" mead__head mead__color--red">
+                </figure>
+                <figure class="mead__bot mead__color--red"></figure>
+            </div>
+            <div id="green" class="mead-contain">
+                <figure class=" mead__head mead__color--green">
+                </figure>
+                <figure class="mead__bot mead__color--green"></figure>
+            </div>
+            <div id="yellow" class="mead-contain">
+                <figure class=" mead__head mead__color--yellow">
+                </figure>
+                <figure class="mead__bot mead__color--yellow"></figure>
+            </div>
+            <div id="blue" class="mead-contain">
+                <figure class=" mead__head mead__color--blue">
+                </figure>
+                <figure class="mead__bot mead__color--blue"></figure>
+            </div>
+        </div>
     </div>
     <script src="./assets/js/bundle.js"></script>
 </body>
