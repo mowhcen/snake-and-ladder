@@ -45,9 +45,9 @@ const initialCellBoard = () => {
 /**
  * make number of cells doesn't cover by snake
  */
-const startCel = [85, 78, 83, 43, , 39, 25, 22, 12];
-const endCel = [44, 55, 76];
-const endEndCel = [53, 54, 47, 46, 45];
+const startCel = [83, 84, 87, 78, 51, 50, 31, 30, 45, 41, 40, 34, 11, 14, 7, 2];
+const endCel = [19, 22];
+const endEndCel = [];
 
 const allCell = () => {
     let remain = [];
