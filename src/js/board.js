@@ -72,7 +72,6 @@ const allCell = () => {
  * @param {*} filter get return value of all cell: ;
  */
 const positionCelNumbers = (filter) => {
-    console.log(filter);
     for (let count = 1; count <= 100; count++) {
         if (filter[count - 1] === "start") {
             $(`.cel-${count}`).addClass("cel--start");

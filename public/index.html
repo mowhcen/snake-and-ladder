@@ -23,7 +23,7 @@
         <div class="initial-game">
             <button class="start-button">Start</button>
             <h6 class="player-count">Player count:</h6>
-            <input type="text" class="count">
+            <input type="text" id="count-player" class="count" maxlength="1">
             <button class="reset-game">Reset Game</button>
         </div>
         <div class="board">
@@ -112,15 +112,11 @@
         </div>
         <div class="initial-player">
             <h3 class="title title--medium">Input Players name:</h3>
-            <input class="get-player" type="text">
+            <form class="get-name-container">
+                <input class="get-player" id="name-player" type="text">
+            </form>
             <h3 class="title title--small">Players</h3>
-            <div class="player-list">
-                <span class="player-name">1. Mohsen</span>
-                <figure class="mead__head mead__color--red"></figure>
-            </div>
-            <div class="player-list">
-                <span class="player-name">2. Javad</span>
-                <figure class="mead__head mead__color--green"></figure>
+            <div class="player-container">
             </div>
         </div>
         <div class="mead-container">
