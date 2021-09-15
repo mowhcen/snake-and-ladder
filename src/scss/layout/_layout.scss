@@ -42,3 +42,11 @@
     justify-items: center;
     align-items: center;
 }
+
+.message {
+    grid-column: begin / begin;
+    grid-row: footer-part / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
