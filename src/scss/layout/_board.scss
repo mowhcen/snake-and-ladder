@@ -72,9 +72,10 @@
     &--first {
         top: 5vh;
         left: 25vh;
-        width: 10vh;
-        height: 20vh;
-        transform: scale(-1);
+        width: 8vh;
+        height: 16vh;
+        transform-origin: bottom;
+        transform: matrix(1, 1, 1, -1, 100, -150);
     }
 
     &--second {
@@ -82,39 +83,44 @@
         left: 45vh;
         width: 8vh;
         height: 16vh;
-        transform: scale(-2) rotate(-5deg);
+        transform-origin: bottom;
+        transform: matrix(0, 1, 2, -1, -20, -15);
     }
 
     &--third {
-        top: 35vh;
-        right: 40vh;
-        width: 15vh;
-        height: 30vh;
-        transform: scaleX(-3) rotate(+135deg);
+        top: 0vh;
+        right: 20vh;
+        width: 8vh;
+        height: 16vh;
+        transform-origin: bottom;
+        transform: matrix(1, 2, 1, -2, 0, -80);
     }
 
     &--fourth {
-        bottom: 5vh;
-        right: 5vh;
-        width: 10vh;
-        height: 20vh;
-        transform: scaleY(-1);
+        bottom: 40vh;
+        right: 30vh;
+        width: 8vh;
+        height: 16vh;
+        transform-origin: bottom;
+        transform: matrix(-1, 1, -1.5, -2, -28, -16);
     }
 
     &--fifth {
-        bottom: 18vh;
-        left: 10vh;
-        width: 15vh;
-        height: 30vh;
-        transform: scale(-1) rotate(20deg);
+        bottom: 35vh;
+        left: 35vh;
+        width: 8vh;
+        height: 16vh;
+        transform-origin: bottom;
+        transform: matrix(0, 1, 2, -1.5, -20, 0);
     }
 
     &--sixth {
-        bottom: 10vh;
+        bottom: 25vh;
         left: 45vh;
         width: 8vh;
         height: 16vh;
-        transform: scaleY(-2);
+        transform-origin: bottom;
+        transform: matrix(1, 1, 1, -1, -18, 10);
     }
 }
 
