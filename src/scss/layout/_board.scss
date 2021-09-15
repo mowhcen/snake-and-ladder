@@ -64,7 +64,7 @@
     }
 }
 
-.snake-svgs {
+.snake-svg {
     position: absolute;
     z-index: 10;
     fill: var(--primary);
@@ -115,5 +115,64 @@
         width: 8vh;
         height: 16vh;
         transform: scaleY(-2);
+    }
+}
+
+.ladder-svg {
+    position: absolute;
+    z-index: 5;
+    fill: var(--shadow-color);
+
+    &--first {
+        top: 5vh;
+        left: 45vh;
+        width: 8vh;
+        height: 16vh;
+        transform-origin: top;
+        transform: matrix(-1, -1, -1.2, 2, -50, -10);
+    }
+
+    &--second {
+        top: 5vh;
+        right: 12vh;
+        width: 8vh;
+        height: 16vh;
+        transform-origin: top;
+        transform: matrix(-1, 0, 0, 2, 0, 0);
+    }
+
+    &--third {
+        bottom: 35vh;
+        right: 40vh;
+        width: 8vh;
+        height: 16vh;
+        transform-origin: bottom;
+        transform: matrix(+1, 0, +0.5, 1.4, -10, 10);
+    }
+
+    &--fourth {
+        bottom: 15vh;
+        right: 0vh;
+        width: 8vh;
+        height: 16vh;
+        transform-origin: bottom;
+        transform: matrix(-1, 0, 0, 3, 0, 0);
+    }
+
+    &--fifth {
+        bottom: 5vh;
+        left: 20vh;
+        width: 8vh;
+        height: 16vh;
+        transform-origin: bottom;
+        transform: matrix(-1, 1, 1, 3, -10, -1);
+    }
+    &--sixth {
+        bottom: 5vh;
+        right: 30vh;
+        width: 8vh;
+        height: 16vh;
+        transform-origin: bottom;
+        transform: matrix(-1, 0, -0.5, 1.3, -10, 10);
     }
 }
