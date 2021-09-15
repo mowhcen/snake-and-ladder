@@ -8,15 +8,14 @@
     margin-left: 3vw;
     height: 100vh;
     width: 100vh;
+    position: relative;
 }
 
 .odd-cel {
     font-family: inherit;
     font-size: 0.8rem;
     background-color: var(--cel-color-1);
-    text-align: end;
-    padding: 0.5rem 0.3rem;
-
+    padding: 0.2rem;
     &__number {
         font-size: 0.8rem;
         color: var(--cel-color-1);
@@ -26,12 +25,35 @@
     }
 }
 
+.cel {
+    &--end {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &--end-end {
+        display: flex;
+        align-items: flex-end;
+        justify-content: end;
+    }
+
+    &--start {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &--start-end {
+        display: flex;
+        align-items: flex-start;
+        justify-content: end;
+    }
+}
+
 .even-cel {
     font-family: inherit;
     font-size: 0.8rem;
     background-color: var(--cel-color-2);
-    text-align: end;
-    padding: 0.5rem 0.3rem;
+    padding: 0.2rem;
 
     &__number {
         font-size: 0.8rem;
@@ -39,5 +61,59 @@
         background-color: var(--cel-color-1);
         padding: 5%;
         border-radius: 50%;
+    }
+}
+
+.snake-svgs {
+    position: absolute;
+    z-index: 10;
+    fill: var(--primary);
+
+    &--first {
+        top: 5vh;
+        left: 25vh;
+        width: 10vh;
+        height: 20vh;
+        transform: scale(-1);
+    }
+
+    &--second {
+        top: 13vh;
+        left: 45vh;
+        width: 8vh;
+        height: 16vh;
+        transform: scale(-2) rotate(-5deg);
+    }
+
+    &--third {
+        top: 35vh;
+        right: 40vh;
+        width: 15vh;
+        height: 30vh;
+        transform: scaleX(-3) rotate(+135deg);
+    }
+
+    &--fourth {
+        bottom: 5vh;
+        right: 5vh;
+        width: 10vh;
+        height: 20vh;
+        transform: scaleY(-1);
+    }
+
+    &--fifth {
+        bottom: 18vh;
+        left: 10vh;
+        width: 15vh;
+        height: 30vh;
+        transform: scale(-1) rotate(20deg);
+    }
+
+    &--sixth {
+        bottom: 10vh;
+        left: 45vh;
+        width: 8vh;
+        height: 16vh;
+        transform: scaleY(-2);
     }
 }
