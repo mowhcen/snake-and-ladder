@@ -17,9 +17,9 @@ const namingPlayer = (count) => {
     });
 };
 
-const count = $("#count-player");
+const inputPlayerName = $("#count-player");
 
-count.on("change", (element) => {
+inputPlayerName.on("change", (element) => {
     namingPlayer(element.target.value);
-    count.attr("disabled", "disabled");
+    inputPlayerName.attr("disabled", "disabled");
 });
