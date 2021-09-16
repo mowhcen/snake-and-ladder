@@ -1,9 +1,11 @@
 let limit = 0;
+const selectInputSubmit = $("#initial-game");
+const selectInputCount = $("#count-player");
+const selectInputNaming = $("#name-player");
+
 const namingPlayer = (count) => {
-    $("#name-player").on("change", (e) => {
+    selectInputNaming.on("change", (e) => {
         limit++;
-        console.log(limit);
-        console.log(count);
         if (limit <= count) {
             $(".player-container").append(`
             <div class="player-list">
@@ -14,12 +16,12 @@ const namingPlayer = (count) => {
         } else {
             return;
         }
+        e.target.value = "";
     });
 };
 
-const inputPlayerName = $("#count-player");
-
-inputPlayerName.on("change", (element) => {
-    namingPlayer(element.target.value);
-    inputPlayerName.attr("disabled", "disabled");
+selectInputSubmit.on("submit", (element) => {
+    namingPlayer(selectInputCount.val());
+    selectInputCount.attr("disabled", "disabled");
+    element.preventDefault();
 });
