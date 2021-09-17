@@ -1,0 +1,15 @@
+.dice-show {
+    padding: 2rem;
+    background-color: var(--secondary);
+    width: 4rem;
+    height: 4rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 900;
+    border-radius: 15px;
+    color: var(--font-color);
+    box-shadow: var(--box-shadow-input);
+}
