@@ -2,6 +2,7 @@ let limit = 0;
 const selectInputSubmit = $("#initial-game");
 const selectInputCount = $("#count-player");
 const selectInputNaming = $("#name-player");
+const selectInputReset = $("#reset-page");
 
 const namingPlayer = (count) => {
     selectInputNaming.on("change", (e) => {
@@ -20,8 +21,16 @@ const namingPlayer = (count) => {
     });
 };
 
-selectInputSubmit.on("submit", (element) => {
-    namingPlayer(selectInputCount.val());
-    selectInputCount.attr("disabled", "disabled");
-    element.preventDefault();
-});
+const initialInput = () => {
+    selectInputSubmit.on("submit", (element) => {
+        namingPlayer(selectInputCount.val());
+        selectInputCount.attr("disabled", "disabled");
+        element.preventDefault();
+    });
+
+    selectInputReset.on("click", () => {
+        location.reload();
+    });
+};
+
+export { initialInput as default };

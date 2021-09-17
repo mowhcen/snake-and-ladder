@@ -3,8 +3,11 @@
  */
 
 import { allCell, initialCellBoard, positionCelNumbers } from "./board";
-import { countingPlayer, namingPlayer } from "./input";
+
+import initialInput from "./input";
 
 initialCellBoard();
 
 positionCelNumbers(allCell());
+
+initialInput();
