@@ -5,9 +5,12 @@
 import { allCell, initialCellBoard, positionCelNumbers } from "./board";
 
 import initialInput from "./input";
+import roleDice from "./dice";
 
 initialCellBoard();
 
 positionCelNumbers(allCell());
 
 initialInput();
+
+roleDice();
