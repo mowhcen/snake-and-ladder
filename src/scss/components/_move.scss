@@ -16,22 +16,22 @@
     transform: translateX(50vh);
 }
 
-.move--fourth-r {
+.move-fourth-r {
     animation: moveRightFourth 4s ease-in;
     transform: translateX(40vh);
 }
 
-.move--three-r {
+.move-three-r {
     animation: moveRightThree 3s ease-in;
     transform: translateX(30vh);
 }
 
-.move--two-r {
+.move-two-r {
     animation: moveRightTwo 2s ease-in;
     transform: translateX(20vh);
 }
 
-.move--one-r {
+.move-one-r {
     animation: moveRightOne 1s ease-in;
     transform: translateX(10vh);
 }
@@ -99,4 +99,34 @@
 .eaten-by-snake-six {
     animation: snakeSix 3.2s linear;
     transform: translate(-10vh, 20vh);
+}
+
+.ladder-clime-one {
+    animation: ladderClimeOne 4s ease-in;
+    transform: translate(20vh, -30vh);
+}
+
+.ladder-clime-two {
+    animation: ladderClimeTwo 3.5s ease-in;
+    transform: translateY(-30vh);
+}
+
+.ladder-clime-three {
+    animation: ladderClimeThree 4.5s ease-in;
+    transform: translateY(-50vh);
+}
+
+.ladder-clime-fourth {
+    animation: ladderClimeFourth 3s ease-in;
+    transform: translate(-10vh, -20vh);
+}
+
+.ladder-clime-five {
+    animation: ladderClimeFive 3s ease-in;
+    transform: translate(10vh, -20vh);
+}
+
+.ladder-clime-six {
+    animation: ladderClimeSix 4s ease-in;
+    transform: translate(-20vh, -50vh);
 }

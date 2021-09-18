@@ -360,3 +360,141 @@
         transform: translate(-30vh, 30vh);
     }
 }
+@keyframes ladderClimeOne {
+    from {
+        transform: translate(0vh, 0vh);
+    }
+    17% {
+        transform: translate(3.5vh, -5vh);
+    }
+    34% {
+        transform: translate(7vh, -10vh);
+    }
+    51% {
+        transform: translate(10.5vh, -15vh);
+    }
+    68% {
+        transform: translate(13.5vh, -20vh);
+    }
+    85% {
+        transform: translate(17vh, -25vh);
+    }
+    to {
+        transform: translate(20vh, -30vh);
+    }
+}
+@keyframes ladderClimeTwo {
+    from {
+        transform: translateY(0vh);
+    }
+    17% {
+        transform: translateY(-5vh);
+    }
+    34% {
+        transform: translateY(-10vh);
+    }
+    51% {
+        transform: translateY(-15vh);
+    }
+    68% {
+        transform: translateY(-20vh);
+    }
+    85% {
+        transform: translateY(-25vh);
+    }
+    to {
+        transform: translateY(-30vh);
+    }
+}
+@keyframes ladderClimeThree {
+    from {
+        transform: translateY(0vh);
+    }
+    17% {
+        transform: translateY(-8.5vh);
+    }
+    34% {
+        transform: translateY(-17vh);
+    }
+    51% {
+        transform: translateY(-25.5vh);
+    }
+    68% {
+        transform: translateY(-34vh);
+    }
+    85% {
+        transform: translateY(-42vh);
+    }
+    to {
+        transform: translateY(-50vh);
+    }
+}
+@keyframes ladderClimeFourth {
+    from {
+        transform: translate(0vh, 0vh);
+    }
+    17% {
+        transform: translate(-2vh, -4vh);
+    }
+    34% {
+        transform: translate(-4vh, -8vh);
+    }
+    51% {
+        transform: translate(-6vh, -12vh);
+    }
+    68% {
+        transform: translate(-8vh, -16vh);
+    }
+    85% {
+        transform: translate(-9vh, -18vh);
+    }
+    to {
+        transform: translate(-10vh, -20vh);
+    }
+}
+@keyframes ladderClimeFive {
+    from {
+        transform: translate(0vh, 0vh);
+    }
+    17% {
+        transform: translate(2vh, -4vh);
+    }
+    34% {
+        transform: translate(4vh, -8vh);
+    }
+    51% {
+        transform: translate(6vh, -12vh);
+    }
+    68% {
+        transform: translate(8vh, -16vh);
+    }
+    85% {
+        transform: translate(9vh, -18vh);
+    }
+    to {
+        transform: translate(10vh, -20vh);
+    }
+}
+@keyframes ladderClimeSix {
+    from {
+        transform: translate(0vh, 0vh);
+    }
+    17% {
+        transform: translate(-4vh, -8.5vh);
+    }
+    34% {
+        transform: translate(-8vh, -17vh);
+    }
+    51% {
+        transform: translate(-12vh, -25.5vh);
+    }
+    68% {
+        transform: translate(-16vh, -34vh);
+    }
+    85% {
+        transform: translate(-18vh, -42.5vh);
+    }
+    to {
+        transform: translate(-20vh, -50vh);
+    }
+}
