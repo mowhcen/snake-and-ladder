@@ -14,9 +14,3 @@ positionCelNumbers(allCell());
 initialInput();
 
 roleDice();
-
-$("#blue").appendTo(".board");
-
-$("#blue").addClass("end-point");
-
-$("#blue").addClass("move-six-l");
