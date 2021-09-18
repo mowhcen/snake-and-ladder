@@ -5,6 +5,13 @@
     bottom: 2vh;
     transform-origin: center;
 }
+.end-point {
+    position: absolute;
+    z-index: 30;
+    right: 3vh;
+    bottom: 2vh;
+    transform-origin: center;
+}
 
 .move-six-r {
     animation: moveRightSix 6s ease-in;
@@ -12,26 +19,61 @@
 }
 
 .move-five-r {
-    animation: moveRight 5s ease-in;
+    animation: moveRightFive 5s ease-in;
     transform: translateX(50vh);
 }
 
 .move--fourth-r {
-    animation: moveRight 4s ease-in;
+    animation: moveRightFourth 4s ease-in;
     transform: translateX(40vh);
 }
 
 .move--three-r {
-    animation: moveRight 3s ease-in;
+    animation: moveRightThree 3s ease-in;
     transform: translateX(30vh);
 }
 
 .move--two-r {
-    animation: moveRight 2s ease-in;
+    animation: moveRightTwo 2s ease-in;
     transform: translateX(20vh);
 }
 
 .move--one-r {
-    animation: moveRight 1s ease-in;
+    animation: moveRightOne 1s ease-in;
     transform: translateX(10vh);
+}
+
+.move-six-l {
+    animation: moveLeftSix 6s ease-in;
+    transform: translateX(-60vh);
+}
+
+.move-five-l {
+    animation: moveLeftFive 5s ease-in;
+    transform: translateX(-50vh);
+}
+
+.move--fourth-l {
+    animation: moveLeftFourth 4s ease-in;
+    transform: translateX(-40vh);
+}
+
+.move--three-l {
+    animation: moveLeftThree 3s ease-in;
+    transform: translateX(-30vh);
+}
+
+.move--two-l {
+    animation: moveLeftTwo 2s ease-in;
+    transform: translateX(-20vh);
+}
+
+.move--one-l {
+    animation: moveLeftOne 1s ease-in;
+    transform: translateX(-10vh);
+}
+
+.move-up {
+    animation: moveUp 1s ease-in;
+    transform: translateY(-10vh);
 }

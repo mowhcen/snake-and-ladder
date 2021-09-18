@@ -17,6 +17,6 @@ roleDice();
 
 $("#blue").appendTo(".board");
 
-$("#blue").addClass("start-point");
+$("#blue").addClass("end-point");
 
-$("#blue").addClass("move-six-r");
+$("#blue").addClass("move-six-l");
