@@ -70,3 +70,33 @@
     animation: moveUp 1s ease-in;
     transform: translateY(-10vh);
 }
+
+.eaten-by-snake-one {
+    animation: snakeOne 8s ease;
+    transform: translate(-30vh, 30vh);
+}
+
+.eaten-by-snake-two {
+    animation: snakeTwo 3.5s linear;
+    transform: translate(-10vh, 20vh);
+}
+
+.eaten-by-snake-three {
+    animation: snakeThree 4s linear;
+    transform: translate(20vh, 40vh);
+}
+
+.eaten-by-snake-fourth {
+    animation: snakeFourth 4s linear;
+    transform: translate(-30vh, 20vh);
+}
+
+.eaten-by-snake-five {
+    animation: snakeFive 5s linear;
+    transform: translate(-10vh, 40vh);
+}
+
+.eaten-by-snake-six {
+    animation: snakeSix 3.2s linear;
+    transform: translate(-10vh, 20vh);
+}

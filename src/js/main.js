@@ -14,3 +14,9 @@ positionCelNumbers(allCell());
 initialInput();
 
 roleDice();
+
+$("#blue").appendTo(".cel-37");
+
+$("#blue").addClass("end-point");
+
+$("#blue").addClass("eaten-by-snake-one");

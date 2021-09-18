@@ -207,3 +207,156 @@
         transform: translateY(-10vh);
     }
 }
+@keyframes snakeSix {
+    from {
+        transform: translate(0vh, 0vh);
+    }
+    15% {
+        transform: translate(-3vh, 0vh);
+    }
+    40% {
+        transform: translate(0vh, 10vh);
+    }
+    65% {
+        transform: translate(-10vh, 8vh);
+    }
+    80% {
+        transform: translate(-7vh, 15vh);
+    }
+    to {
+        transform: translate(-10vh, 20vh);
+    }
+}
+@keyframes snakeFive {
+    from {
+        transform: translate(0vh, 0vh);
+    }
+    10% {
+        transform: translate(0vh, 5vh);
+    }
+    20% {
+        transform: translate(-5.5vh, 1vh);
+    }
+    35% {
+        transform: translate(-5vh, 10vh);
+    }
+    50% {
+        transform: translate(-4vh, 23vh);
+    }
+    65% {
+        transform: translate(-13vh, 16vh);
+    }
+    80% {
+        transform: translate(-10vh, 30vh);
+    }
+    90% {
+        transform: translate(-12vh, 30vh);
+    }
+    to {
+        transform: translate(-10vh, 40vh);
+    }
+}
+@keyframes snakeFourth {
+    from {
+        transform: translate(0vh, 0vh);
+    }
+    15% {
+        transform: translate(-4vh, 3vh);
+    }
+    20% {
+        transform: translate(-4.5vh, 1vh);
+    }
+    50% {
+        transform: translate(-13.5vh, 10vh);
+    }
+    65% {
+        transform: translate(-20vh, 8vh);
+    }
+    75% {
+        transform: translate(-22vh, 13vh);
+    }
+    85% {
+        transform: translate(-27vh, 14vh);
+    }
+    to {
+        transform: translate(-30vh, 20vh);
+    }
+}
+@keyframes snakeThree {
+    from {
+        transform: translate(0vh, 0vh);
+    }
+    15% {
+        transform: translate(1vh, 8vh);
+    }
+    25% {
+        transform: translate(6vh, 5vh);
+    }
+    50% {
+        transform: translate(6vh, 20vh);
+    }
+    65% {
+        transform: translate(17vh, 19vh);
+    }
+    80% {
+        transform: translate(15vh, 25vh);
+    }
+    to {
+        transform: translate(20vh, 40vh);
+    }
+}
+@keyframes snakeTwo {
+    from {
+        transform: translate(0vh, 0vh);
+    }
+    15% {
+        transform: translate(0vh, 2.5vh);
+    }
+    25% {
+        transform: translate(-7vh, 1vh);
+    }
+    40% {
+        transform: translate(-3vh, 12vh);
+    }
+    60% {
+        transform: translate(-14vh, 8vh);
+    }
+    75% {
+        transform: translate(-10vh, 15vh);
+    }
+    85% {
+        transform: translate(-12vh, 15vh);
+    }
+    to {
+        transform: translate(-10vh, 20vh);
+    }
+}
+@keyframes snakeOne {
+    from {
+        transform: translate(0vh, 0vh);
+    }
+    15% {
+        transform: translate(-5vh, 3vh);
+    }
+    20% {
+        transform: translate(-6vh, 1.5vh);
+    }
+    55% {
+        transform: translate(-15vh, 15vh);
+    }
+    65% {
+        transform: translate(-20vh, 13vh);
+    }
+    70% {
+        transform: translate(-22vh, 13vh);
+    }
+    80% {
+        transform: translate(-25vh, 22vh);
+    }
+    90% {
+        transform: translate(-29vh, 25vh);
+    }
+    to {
+        transform: translate(-30vh, 30vh);
+    }
+}
