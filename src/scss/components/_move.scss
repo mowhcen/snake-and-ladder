@@ -1,0 +1,132 @@
+.end-point {
+    position: absolute;
+    z-index: 30;
+    left: 3vh;
+    bottom: 2vh;
+    transform-origin: center;
+}
+
+.move-six-r {
+    animation: moveRightSix 6s ease-in;
+    transform: translateX(60vh);
+}
+
+.move-five-r {
+    animation: moveRightFive 5s ease-in;
+    transform: translateX(50vh);
+}
+
+.move-fourth-r {
+    animation: moveRightFourth 4s ease-in;
+    transform: translateX(40vh);
+}
+
+.move-three-r {
+    animation: moveRightThree 3s ease-in;
+    transform: translateX(30vh);
+}
+
+.move-two-r {
+    animation: moveRightTwo 2s ease-in;
+    transform: translateX(20vh);
+}
+
+.move-one-r {
+    animation: moveRightOne 1s ease-in;
+    transform: translateX(10vh);
+}
+
+.move-six-l {
+    animation: moveLeftSix 6s ease-in;
+    transform: translateX(-60vh);
+}
+
+.move-five-l {
+    animation: moveLeftFive 5s ease-in;
+    transform: translateX(-50vh);
+}
+
+.move--fourth-l {
+    animation: moveLeftFourth 4s ease-in;
+    transform: translateX(-40vh);
+}
+
+.move--three-l {
+    animation: moveLeftThree 3s ease-in;
+    transform: translateX(-30vh);
+}
+
+.move--two-l {
+    animation: moveLeftTwo 2s ease-in;
+    transform: translateX(-20vh);
+}
+
+.move--one-l {
+    animation: moveLeftOne 1s ease-in;
+    transform: translateX(-10vh);
+}
+
+.move-up {
+    animation: moveUp 1s ease-in;
+    transform: translateY(-10vh);
+}
+
+.eaten-by-snake-one {
+    animation: snakeOne 8s ease;
+    transform: translate(-30vh, 30vh);
+}
+
+.eaten-by-snake-two {
+    animation: snakeTwo 3.5s linear;
+    transform: translate(-10vh, 20vh);
+}
+
+.eaten-by-snake-three {
+    animation: snakeThree 4s linear;
+    transform: translate(20vh, 40vh);
+}
+
+.eaten-by-snake-fourth {
+    animation: snakeFourth 4s linear;
+    transform: translate(-30vh, 20vh);
+}
+
+.eaten-by-snake-five {
+    animation: snakeFive 5s linear;
+    transform: translate(-10vh, 40vh);
+}
+
+.eaten-by-snake-six {
+    animation: snakeSix 3.2s linear;
+    transform: translate(-10vh, 20vh);
+}
+
+.ladder-clime-one {
+    animation: ladderClimeOne 4s ease-in;
+    transform: translate(20vh, -30vh);
+}
+
+.ladder-clime-two {
+    animation: ladderClimeTwo 3.5s ease-in;
+    transform: translateY(-30vh);
+}
+
+.ladder-clime-three {
+    animation: ladderClimeThree 4.5s ease-in;
+    transform: translateY(-50vh);
+}
+
+.ladder-clime-fourth {
+    animation: ladderClimeFourth 3s ease-in;
+    transform: translate(-10vh, -20vh);
+}
+
+.ladder-clime-five {
+    animation: ladderClimeFive 3s ease-in;
+    transform: translate(10vh, -20vh);
+}
+
+.ladder-clime-six {
+    animation: ladderClimeSix 4s ease-in;
+    transform: translate(-20vh, -50vh);
+}

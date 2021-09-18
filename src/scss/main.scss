@@ -1,3 +1,4 @@
+@import "./abstracts/animations";
 @import "./abstracts/variables";
 
 @import "./base/base";
@@ -8,6 +9,7 @@
 @import "components/inputs";
 @import "components/meads";
 @import "components/message";
+@import "components/move";
 
 @import "./layout/layout";
 @import "./layout/board";
