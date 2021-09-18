@@ -1,15 +1,15 @@
 .mead {
     &__head {
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 1.5vh;
+        height: 1.5vh;
         margin-right: 2rem;
         margin-bottom: -0.2rem;
         border-radius: 50%;
     }
 
     &__bot {
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 3vh;
+        height: 3vh;
         margin-right: 2rem;
         clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
     }
