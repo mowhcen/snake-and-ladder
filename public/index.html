@@ -114,21 +114,23 @@
             <h3 class="title title--medium">Input Players name:</h3>
             <form id="get-info" class="get-name-container">
                 <input class="get-player" id="name-player" type="text">
-                <select id="color-pick">
-                    <option value="">--Pick a Color--</option>
-                    <option value="red">
-                        <figure class="mead__head mead__color--red"></figure>
-                    </option>
-                    <option value="blue">
-                        <figure class="mead__head mead__color--blue"></figure>
-                    </option>
-                    <option value="yellow">
-                        <figure class="mead__head mead__color--yellow"></figure>
-                    </option>
-                    <option value="green">
-                        <figure class="mead__head mead__color--green"></figure>
-                    </option>
-                </select>
+                <div class="get-color active">
+                    <div class="get-color__icon push"></div>
+                    <div class="drop-down show">
+                        <div type="submit" class="drop-down__item">
+                            <figure class="mead__pick mead__color--red"></figure>
+                        </div>
+                        <div type="submit" class="drop-down__item">
+                            <figure class="mead__pick mead__color--green"></figure>
+                        </div>
+                        <div type="submit" class="drop-down__item">
+                            <figure class="mead__pick mead__color--yellow"></figure>
+                        </div>
+                        <div type="submit" class="drop-down__item">
+                            <figure class="mead__pick mead__color--blue"></figure>
+                        </div>
+                    </div>
+                </div>
             </form>
             <h3 class="title title--small">Players</h3>
             <div class="player-container">
