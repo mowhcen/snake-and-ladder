@@ -4,6 +4,7 @@ const selectInputSubmit = $("#initial-game");
 const selectInputCount = $("#count-player");
 const selectInputNaming = $("#name-player");
 const selectInputReset = $("#reset-page");
+const selectFormGetPLayer = $("#get-info");
 
 const namingPlayer = (count) => {
     selectInputNaming.on("change", (e) => {
