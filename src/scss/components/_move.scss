@@ -1,0 +1,37 @@
+.start-point {
+    position: absolute;
+    z-index: 30;
+    left: 3vh;
+    bottom: 2vh;
+    transform-origin: center;
+}
+
+.move-six-r {
+    animation: moveRightSix 6s ease-in;
+    transform: translateX(60vh);
+}
+
+.move-five-r {
+    animation: moveRight 5s ease-in;
+    transform: translateX(50vh);
+}
+
+.move--fourth-r {
+    animation: moveRight 4s ease-in;
+    transform: translateX(40vh);
+}
+
+.move--three-r {
+    animation: moveRight 3s ease-in;
+    transform: translateX(30vh);
+}
+
+.move--two-r {
+    animation: moveRight 2s ease-in;
+    transform: translateX(20vh);
+}
+
+.move--one-r {
+    animation: moveRight 1s ease-in;
+    transform: translateX(10vh);
+}

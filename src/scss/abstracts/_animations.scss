@@ -1,0 +1,101 @@
+@keyframes moveRightSix {
+    from {
+        transform: translateX(0vh);
+    }
+
+    17% {
+        transform: translateX((6- 5) * 10vh);
+    }
+    34% {
+        transform: translateX((6- 4) * 10vh);
+    }
+    51% {
+        transform: translateX((6- 3) * 10vh);
+    }
+    68% {
+        transform: translateX((6- 2) * 10vh);
+    }
+    85% {
+        transform: translateX((6- 1) * 10vh);
+    }
+
+    to {
+        transform: translateX(6 * 10vh);
+    }
+}
+@keyframes moveRightFive {
+    from {
+        transform: translateX(0vh);
+    }
+
+    20% {
+        transform: translateX((5 - 4) * 10vh);
+    }
+    40% {
+        transform: translateX((5 - 3) * 10vh);
+    }
+    60% {
+        transform: translateX((5 - 2) * 10vh);
+    }
+    80% {
+        transform: translateX((5 - 1) * 10vh);
+    }
+    to {
+        transform: translateX(5 * 10vh);
+    }
+}
+@keyframes moveRightFourth {
+    from {
+        transform: translateX(0vh);
+    }
+
+    25% {
+        transform: translateX((4 - 3) * 10vh);
+    }
+    50% {
+        transform: translateX((4 - 2) * 10vh);
+    }
+    75% {
+        transform: translateX((4 - 1) * 10vh);
+    }
+    to {
+        transform: translateX(4 * 10vh);
+    }
+}
+@keyframes moveRightThree {
+    from {
+        transform: translateX(0vh);
+    }
+
+    33% {
+        transform: translateX((3 - 2) * 10vh);
+    }
+    66% {
+        transform: translateX((3 - 1) * 10vh);
+    }
+    to {
+        transform: translateX(3 * 10vh);
+    }
+}
+@keyframes moveRightTwo {
+    from {
+        transform: translateX(0vh);
+    }
+
+    50% {
+        transform: translateX((2 - 1) * 10vh);
+    }
+    to {
+        transform: translateX(2 * 10vh);
+    }
+}
+
+@keyframes moveRightOne {
+    from {
+        transform: translateX(0vh);
+    }
+
+    to {
+        transform: translateX(10vh);
+    }
+}
