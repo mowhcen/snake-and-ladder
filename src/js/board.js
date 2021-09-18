@@ -1,3 +1,4 @@
+"use strick";
 /**
  * this function only created div for every cell and attach them to its container
  */

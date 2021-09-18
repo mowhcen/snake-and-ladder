@@ -1,3 +1,4 @@
+"use strick";
 let limit = 0;
 const selectInputSubmit = $("#initial-game");
 const selectInputCount = $("#count-player");

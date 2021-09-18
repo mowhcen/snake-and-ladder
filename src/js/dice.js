@@ -1,3 +1,5 @@
+"use strick";
+
 const selectDiceButton = $("#dice");
 const selectDiceShow = $("#dice-show");
 
