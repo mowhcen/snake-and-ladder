@@ -94,46 +94,53 @@ const positionCelNumbers = (filter) => {
  *
  */
 const drawLine = ($startCell, $finishCell) => {
-    const $start = $(`#cel-${$startCell}`);
-    const $finish = $(`#cel-${$finishCell}`);
-    const offsetStart = $start.offset();
-    const offsetFinish = $finish.offset();
-    const height = offsetStart.top - offsetFinish.top;
-    const width = offsetStart.left - offsetFinish.left;
+    const $selectStart = $(`#cel-${$startCell}`);
+    const $selectFinish = $(`#cel-${$finishCell}`);
+    const offsetStart = $selectStart.offset();
+    const offsetFinish = $selectFinish.offset();
+    const height = Math.abs(offsetStart.top - offsetFinish.top);
+    const width = Math.abs(offsetStart.left - offsetFinish.left);
+    const boardHeight = selectBoard.height();
+    const boardLeft = selectBoard.offset().left;
+    const centering = 5;
+    const angel = Math.PI - Math.atan2(height, width);
 
-    const angel = Math.PI - Math.atan2(Math.abs(height), Math.abs(width));
-    console.log($start, offsetStart, height);
-    console.log($finish, offsetFinish, width);
-    console.log(angel);
-    // const widthStart = $startPoint.width();
-    // const heightStart = $startPoint.height();
+    const elementWidth = Math.pow(
+        Math.pow(width, 2) + Math.pow(height, 2),
+        1 / 2
+    );
 
-    // const centerStartX = offsetStart.left + widthStart / 3;
-    // const centerStartY = offsetStart.top + heightStart / 3;
+    const percentWidth = (elementWidth / boardHeight) * 100;
 
-    // console.log(centerStartX, centerStartY);
+    let percentTop;
+    let percentLeft;
+    let $color;
+    if ($startCell > $finishCell) {
+        $color = "red";
+        percentTop = ((offsetStart.top + height / 2) / boardHeight) * 100;
+        percentLeft =
+            ((offsetFinish.left + width / 2 - boardLeft) / boardHeight) * 100;
+        percentLeft -= percentWidth / 2;
+    } else {
+        $color = "blue";
+        percentTop = ((offsetFinish.top + height / 2) / boardHeight) * 100;
+        percentLeft =
+            ((offsetStart.left + width / 2 - boardLeft) / boardHeight) * 100;
+        percentLeft -= percentWidth / 2;
+    }
 
-    //
-    // const widthFinish = $finishPoint.width();
-    // const heightFinish = $finishPoint.height();
-
-    // const centerFinishX = offsetFinish.left + widthFinish / 3;
-    // const centerFinishY = offsetFinish.top + heightFinish / 3;
-
-    // const height = Math.abs(centerStartY - centerFinishY);
-    // const width = centerStartX - centerFinishX;
-    // console.log(height, width);
     const style = {
         position: "absolute",
+
         "z-index": 100,
-        top: `45vh`,
-        left: `22vh`,
-        width: `36vh`,
+        top: `${percentTop + centering}vh`,
+        left: `${percentLeft + centering}vh`,
+        width: `${percentWidth}vh`,
 
         "border-radius": "10px",
 
-        transform: `rotate(2.5535900500422257rad)`,
-        "border-bottom": `5px solid red`,
+        transform: `rotate(${angel}rad)`,
+        "border-bottom": `5px solid ${$color}`,
     };
     selectBoard.prepend(`<div class="line"></div>`);
     $(`.line`).css(style);
