@@ -2,7 +2,12 @@
  * import exported functions in other js files into main
  */
 
-import { allCell, initialCellBoard, positionCelNumbers } from "./board";
+import {
+    allCell,
+    drawLine,
+    initialCellBoard,
+    positionCelNumbers,
+} from "./board";
 import { choseColor, dropDown } from "./dropdown";
 
 import initialInput from "./input";
@@ -22,3 +27,5 @@ sampleMove();
 dropDown();
 
 choseColor();
+
+drawLine(43, 66);

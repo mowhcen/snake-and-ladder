@@ -1,4 +1,6 @@
 "use strick";
+
+const selectBoard = $(".board");
 /**
  * this function only created div for every cell and attach them to its container
  */
@@ -7,35 +9,35 @@ const initialCellBoard = () => {
 
     for (let countRow = 0; countRow < 5; countRow++) {
         for (let count = 0; count < 5; count++) {
-            $(".board").append(
-                `<div class="odd-cel cel-${
+            selectBoard.append(
+                `<div id="cel-${
                     100 - countRow * 20 - count * 2
-                }"><span class="odd-cel__number">${
+                }" class="odd-cel "><span class="odd-cel__number">${
                     100 - countRow * 20 - count * 2
                 }</span></div>`
             );
-            $(".board").append(
-                `<div class="even-cel cel-${
+            selectBoard.append(
+                `<div id="cel-${
                     99 - countRow * 20 - count * 2
-                }"><span class="even-cel__number">${
+                }" class="even-cel "><span class="even-cel__number">${
                     99 - countRow * 20 - count * 2
                 }</span></div>`
             );
         }
         for (let count = 0; count < 5; count++) {
             countRow === 4 ? (zero = "0") : (zero = "");
-            $(".board").append(
-                `<div class="even-cel cel-${
+            selectBoard.append(
+                `<div id="cel-${
                     81 - countRow * 20 + count * 2
-                }"><span class="even-cel__number">${zero}${
+                }" class="even-cel "><span class="even-cel__number">${zero}${
                     81 - countRow * 20 + count * 2
                 }</span></div>`
             );
             countRow === 4 && count !== 4 ? (zero = "0") : (zero = "");
-            $(".board").append(
-                `<div class="odd-cel cel-${
+            selectBoard.append(
+                `<div id="cel-${
                     82 - countRow * 20 + count * 2
-                }"><span class="odd-cel__number">${zero}${
+                }" class="odd-cel "><span class="odd-cel__number">${zero}${
                     82 - countRow * 20 + count * 2
                 }</span></div>`
             );
@@ -77,15 +79,64 @@ const allCell = () => {
 const positionCelNumbers = (filter) => {
     for (let count = 1; count <= 100; count++) {
         if (filter[count - 1] === "start") {
-            $(`.cel-${count}`).addClass("cel--start");
+            $(`#cel-${count}`).addClass("cel--start");
         } else if (filter[count - 1] === "end") {
-            $(`.cel-${count}`).addClass("cel--end");
+            $(`#cel-${count}`).addClass("cel--end");
         } else if (filter[count - 1] === "end-end") {
-            $(`.cel-${count}`).addClass("cel--end-end");
+            $(`#cel-${count}`).addClass("cel--end-end");
         } else {
-            $(`.cel-${count}`).addClass("cel--start-end");
+            $(`#cel-${count}`).addClass("cel--start-end");
         }
     }
 };
+/**
+ * daw line on board
+ *
+ */
+const drawLine = ($startCell, $finishCell) => {
+    const $start = $(`#cel-${$startCell}`);
+    const $finish = $(`#cel-${$finishCell}`);
+    const offsetStart = $start.offset();
+    const offsetFinish = $finish.offset();
+    const height = offsetStart.top - offsetFinish.top;
+    const width = offsetStart.left - offsetFinish.left;
 
-export { initialCellBoard, positionCelNumbers, allCell };
+    const angel = Math.PI - Math.atan2(Math.abs(height), Math.abs(width));
+    console.log($start, offsetStart, height);
+    console.log($finish, offsetFinish, width);
+    console.log(angel);
+    // const widthStart = $startPoint.width();
+    // const heightStart = $startPoint.height();
+
+    // const centerStartX = offsetStart.left + widthStart / 3;
+    // const centerStartY = offsetStart.top + heightStart / 3;
+
+    // console.log(centerStartX, centerStartY);
+
+    //
+    // const widthFinish = $finishPoint.width();
+    // const heightFinish = $finishPoint.height();
+
+    // const centerFinishX = offsetFinish.left + widthFinish / 3;
+    // const centerFinishY = offsetFinish.top + heightFinish / 3;
+
+    // const height = Math.abs(centerStartY - centerFinishY);
+    // const width = centerStartX - centerFinishX;
+    // console.log(height, width);
+    const style = {
+        position: "absolute",
+        "z-index": 100,
+        top: `45vh`,
+        left: `22vh`,
+        width: `36vh`,
+
+        "border-radius": "10px",
+
+        transform: `rotate(2.5535900500422257rad)`,
+        "border-bottom": `5px solid red`,
+    };
+    selectBoard.prepend(`<div class="line"></div>`);
+    $(`.line`).css(style);
+};
+
+export { initialCellBoard, positionCelNumbers, allCell, drawLine };
