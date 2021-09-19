@@ -48,11 +48,14 @@ const initialCellBoard = () => {
 /**
  * make number of cells doesn't cover by snake
  */
-const startCel = [
-    84, 87, 78, 51, 50, 31, 79, 30, 45, 27, 17, 36, 41, 40, 34, 11, 14, 7, 2,
-];
-const endCel = [19, 22, 77];
-const endEndCel = [13, 59];
+const startCel = [];
+// [
+//     84, 87, 78, 51, 50, 31, 79, 30, 45, 27, 17, 36, 41, 40, 34, 11, 14, 7, 2,
+// ];
+const endCel = [];
+//  [19, 22, 77];
+const endEndCel = [];
+//  [13, 59];
 
 const allCell = () => {
     let remain = [];
@@ -93,7 +96,7 @@ const positionCelNumbers = (filter) => {
  * daw line on board
  *
  */
-const drawLine = ($startCell, $finishCell) => {
+const drawLine = ($startCell, $finishCell, rotate = "") => {
     const $selectStart = $(`#cel-${$startCell}`);
     const $selectFinish = $(`#cel-${$finishCell}`);
     const offsetStart = $selectStart.offset();
@@ -103,7 +106,7 @@ const drawLine = ($startCell, $finishCell) => {
     const boardHeight = selectBoard.height();
     const boardLeft = selectBoard.offset().left;
     const centering = 5;
-    const angel = Math.PI - Math.atan2(height, width);
+    let angel = Math.PI - Math.atan2(height, width);
 
     const elementWidth = Math.pow(
         Math.pow(width, 2) + Math.pow(height, 2),
@@ -118,15 +121,29 @@ const drawLine = ($startCell, $finishCell) => {
     if ($startCell > $finishCell) {
         $color = "red";
         percentTop = ((offsetStart.top + height / 2) / boardHeight) * 100;
-        percentLeft =
-            ((offsetFinish.left + width / 2 - boardLeft) / boardHeight) * 100;
-        percentLeft -= percentWidth / 2;
     } else {
         $color = "blue";
         percentTop = ((offsetFinish.top + height / 2) / boardHeight) * 100;
+    }
+
+    if (
+        rotate === "right-ladder" ||
+        rotate === "vertical" ||
+        rotate === "left-snake"
+    ) {
         percentLeft =
             ((offsetStart.left + width / 2 - boardLeft) / boardHeight) * 100;
         percentLeft -= percentWidth / 2;
+        if (rotate === "left-snake") {
+            angel = -angel;
+        }
+    } else if (rotate === "left-ladder" || rotate === "right-snake") {
+        percentLeft =
+            ((offsetFinish.left + width / 2 - boardLeft) / boardHeight) * 100;
+        percentLeft -= percentWidth / 2;
+        if (rotate === "left-ladder") {
+            angel = -angel;
+        }
     }
 
     const style = {
@@ -142,8 +159,8 @@ const drawLine = ($startCell, $finishCell) => {
         transform: `rotate(${angel}rad)`,
         "border-bottom": `5px solid ${$color}`,
     };
-    selectBoard.prepend(`<div class="line"></div>`);
-    $(`.line`).css(style);
+    selectBoard.prepend(`<div id="line-${$startCell}-${$finishCell}"></div>`);
+    $(`#line-${$startCell}-${$finishCell}`).css(style);
 };
 
 export { initialCellBoard, positionCelNumbers, allCell, drawLine };
