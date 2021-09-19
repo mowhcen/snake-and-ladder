@@ -3,6 +3,7 @@
  */
 
 import { allCell, initialCellBoard, positionCelNumbers } from "./board";
+import { choseColor, dropDown } from "./dropdown";
 
 import initialInput from "./input";
 import roleDice from "./dice";
@@ -17,3 +18,7 @@ initialInput();
 roleDice();
 
 sampleMove();
+
+dropDown();
+
+choseColor();

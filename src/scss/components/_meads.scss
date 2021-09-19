@@ -2,15 +2,19 @@
     &__head {
         width: 2vh;
         height: 2vh;
-        // margin-right: 2rem;
         margin-bottom: -0.2rem;
+        border-radius: 50%;
+    }
+
+    &__pick {
+        width: 1rem;
+        height: 1rem;
         border-radius: 50%;
     }
 
     &__bot {
         width: 4vh;
         height: 4vh;
-        // margin-right: 2rem;
         clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
     }
     &__color {
