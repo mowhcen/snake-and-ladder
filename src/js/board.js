@@ -29,7 +29,6 @@ const allCell = () => {
         centering.includes(element) ? "centering" : element
     );
 
-    console.log(remain);
     return remain;
 };
 
