@@ -67,64 +67,12 @@
     }
 }
 
-.snake-svg {
+#snake {
     position: absolute;
-    z-index: 10;
-    fill: var(--primary);
-
-    &--first {
-        top: -10vh;
-        left: 25vh;
-        width: 8vh;
-        height: 16vh;
-        transform-origin: bottom;
-        transform: matrix(1, 1, 1, -1, 0, 0);
-    }
-
-    &--second {
-        top: 10vh;
-        left: 43vh;
-        width: 8vh;
-        height: 16vh;
-        transform-origin: bottom;
-        transform: matrix(0, 1, 2, -1, 0, 0);
-    }
-
-    &--third {
-        top: -10vh;
-        right: 20vh;
-        width: 8vh;
-        height: 16vh;
-        transform-origin: bottom;
-        transform: matrix(1, 2, 1, -2, 0, 0);
-    }
-
-    &--fourth {
-        bottom: 43vh;
-        right: 34vh;
-        width: 8vh;
-        height: 16vh;
-        transform-origin: bottom;
-        transform: matrix(-1, 1, -1.5, -2, 0, 0);
-    }
-
-    &--fifth {
-        bottom: 35vh;
-        left: 32vh;
-        width: 8vh;
-        height: 16vh;
-        transform-origin: bottom;
-        transform: matrix(0, 1, 2, -1.5, 0, 0);
-    }
-
-    &--sixth {
-        bottom: 23vh;
-        left: 42vh;
-        width: 8vh;
-        height: 16vh;
-        transform-origin: bottom;
-        transform: matrix(1, 1, 1, -1, 0, 0);
-    }
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .ladder-svg {

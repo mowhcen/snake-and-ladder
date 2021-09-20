@@ -118,8 +118,10 @@ const drawLine = ($startCell, $finishCell, rotate = "") => {
     let percentTop;
     let percentLeft;
     let $color;
+    let scale = "Y";
+
     if ($startCell > $finishCell) {
-        $color = "red";
+        $color = "transparent";
         percentTop = ((offsetStart.top + height / 2) / boardHeight) * 100;
     } else {
         $color = "blue";
@@ -136,6 +138,7 @@ const drawLine = ($startCell, $finishCell, rotate = "") => {
         percentLeft -= percentWidth / 2;
         if (rotate === "left-snake") {
             angel = -angel;
+            scale = "X";
         }
     } else if (rotate === "left-ladder" || rotate === "right-snake") {
         percentLeft =
@@ -150,16 +153,22 @@ const drawLine = ($startCell, $finishCell, rotate = "") => {
         position: "absolute",
 
         "z-index": 100,
-        top: `${percentTop + centering}vh`,
+        top: `${percentTop}vh`,
         left: `${percentLeft + centering}vh`,
         width: `${percentWidth}vh`,
+        height: `${percentWidth / 4}vh`,
 
-        "border-radius": "10px",
-
-        transform: `rotate(${angel}rad)`,
-        "border-bottom": `5px solid ${$color}`,
+        transform: `rotate(${angel}rad) scale${scale}(-1)`,
+        border: `5px solid ${$color}`,
     };
     selectBoard.prepend(`<div id="line-${$startCell}-${$finishCell}"></div>`);
+
+    if ($color === "transparent") {
+        $(`#line-${$startCell}-${$finishCell}`).append(
+            ` <img id="snake" src="./images/snake.png" alt="snake shape">`
+        );
+    }
+
     $(`#line-${$startCell}-${$finishCell}`).css(style);
 };
 
