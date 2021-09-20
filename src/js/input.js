@@ -1,5 +1,6 @@
 "use strick";
 
+import { colorSaver } from "./dropdown";
 import message from "./message";
 import { start } from "./move";
 
@@ -17,7 +18,7 @@ const namingPlayer = (count) => {
             $(".player-container").append(`
             <div class="player-list">
                  <span class="player-name">${limit}. ${e.target.value}</span>
-                 <figure class="mead__head mead__color--green"></figure>
+                 <figure class="mead__pick mead__color--${colorSaver()}"></figure>
             </div>
             `);
         } else {
