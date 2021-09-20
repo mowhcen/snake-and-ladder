@@ -202,4 +202,4 @@ const initialCellBoard = () => {
     positionCelNumbers(allCell());
 };
 
-export { initialCellBoard, positionCelNumbers, allCell, drawLine };
+export { initialCellBoard as default };

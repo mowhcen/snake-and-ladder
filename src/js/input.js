@@ -1,4 +1,7 @@
 "use strick";
+
+import { start } from "./move";
+
 let limit = 0;
 const selectInputSubmit = $("#initial-game");
 const selectInputCount = $("#count-player");
@@ -23,8 +26,9 @@ const namingPlayer = (count) => {
     });
 };
 
-const initialInput = () => {
+const initialGame = () => {
     selectInputSubmit.on("submit", (element) => {
+        start();
         namingPlayer(selectInputCount.val());
         selectInputCount.attr("disabled", "disabled");
         element.preventDefault();
@@ -35,4 +39,4 @@ const initialInput = () => {
     });
 };
 
-export { initialInput as default };
+export { initialGame as default };

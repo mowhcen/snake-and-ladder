@@ -2,25 +2,24 @@
  * import exported functions in other js files into main
  */
 
-import {
-    allCell,
-    drawLine,
-    initialCellBoard,
-    positionCelNumbers,
-} from "./board";
 import { choseColor, dropDown } from "./dropdown";
 
-import initialInput from "./input";
+import initialCellBoard from "./board";
+import initialGame from "./input";
 import roleDice from "./dice";
-import sampleMove from "./move";
 
+// import sampleMove from "./move";
+
+/**
+ * draw the board on page by js
+ */
 initialCellBoard();
-
-initialInput();
+/**
+ * by calling this function game will start running
+ */
+initialGame();
 
 roleDice();
-
-sampleMove();
 
 dropDown();
 

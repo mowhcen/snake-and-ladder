@@ -1,14 +1,16 @@
 "use strick";
 
-const sampleMove = () => {
-    $("#blue").appendTo("#cel-1");
-    $("#blue").addClass("end-point");
-    $("#yellow").appendTo("#cel-1");
-    $("#yellow").addClass("end-point");
-    $("#green").appendTo("#cel-1");
-    $("#green").addClass("end-point");
-    $("#red").appendTo("#cel-1");
-    $("#red").addClass("end-point");
+const start = () => {
+    $(".mead-container").appendTo("#cel-1");
+    $(".mead-container").addClass("point--start point");
+
+    // $("#blue").appendTo("#cel-2");
+    // $("#blue").addClass("point point--end");
+    // $("#yellow").appendTo("#cel-1");
+
+    // $("#green").appendTo("#cel-1");
+
+    // $("#red").appendTo("#cel-1");
 };
 
-export { sampleMove as default };
+export { start };
