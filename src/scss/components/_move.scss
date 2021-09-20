@@ -1,7 +1,14 @@
-.end-point {
+.point {
     position: absolute;
     z-index: 30;
-    left: 3vh;
-    bottom: 2vh;
     transform-origin: center;
+
+    &--end {
+        left: 3vh;
+        bottom: 2vh;
+    }
+    &--start {
+        left: 0vh;
+        bottom: 0vh;
+    }
 }

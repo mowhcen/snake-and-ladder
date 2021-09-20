@@ -3,10 +3,7 @@
 const selectContainer = $(".get-color");
 const selectIcon = $(".get-color__icon");
 const selectDropdown = $(".drop-down");
-const choseRed = $("#chose-red");
-const choseYellow = $("#chose-yellow");
-const choseBlue = $("#chose-blue");
-const choseGreen = $("#chose-green");
+let $color = "";
 
 const dropDown = () => {
     selectContainer.on("click", (e) => {
@@ -22,8 +19,8 @@ const dropDown = () => {
     });
 };
 
-const colorSaver = (color = "") => {
-    console.log(color);
+const colorSaver = () => {
+    return $color;
 };
 
 const choseColor = () => {
@@ -32,24 +29,28 @@ const choseColor = () => {
             e.target.parentElement.id === "chose-red" ||
             e.target.id === "chose-red"
         ) {
-            colorSaver("red");
+            $color = "red";
+            colorSaver();
         } else if (
             e.target.parentElement.id === "chose-green" ||
             e.target.id === "chose-green"
         ) {
-            colorSaver("green");
+            $color = "green";
+            colorSaver();
         } else if (
             e.target.parentElement.id === "chose-blue" ||
             e.target.id === "chose-blue"
         ) {
-            colorSaver("blue");
+            $color = "blue";
+            colorSaver();
         } else if (
             e.target.parentElement.id === "chose-yellow" ||
             e.target.id === "chose-yellow"
         ) {
-            colorSaver("yellow");
+            $color = "yellow";
+            colorSaver();
         }
     });
 };
 
-export { dropDown, choseColor };
+export { dropDown, choseColor, colorSaver };

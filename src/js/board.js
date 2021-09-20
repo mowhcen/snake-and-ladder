@@ -2,50 +2,6 @@
 
 const selectBoard = $(".board");
 /**
- * this function only created div for every cell and attach them to its container
- */
-const initialCellBoard = () => {
-    let zero = "";
-
-    for (let countRow = 0; countRow < 5; countRow++) {
-        for (let count = 0; count < 5; count++) {
-            selectBoard.append(
-                `<div id="cel-${
-                    100 - countRow * 20 - count * 2
-                }" class="odd-cel "><span class="odd-cel__number">${
-                    100 - countRow * 20 - count * 2
-                }</span></div>`
-            );
-            selectBoard.append(
-                `<div id="cel-${
-                    99 - countRow * 20 - count * 2
-                }" class="even-cel "><span class="even-cel__number">${
-                    99 - countRow * 20 - count * 2
-                }</span></div>`
-            );
-        }
-        for (let count = 0; count < 5; count++) {
-            countRow === 4 ? (zero = "0") : (zero = "");
-            selectBoard.append(
-                `<div id="cel-${
-                    81 - countRow * 20 + count * 2
-                }" class="even-cel "><span class="even-cel__number">${zero}${
-                    81 - countRow * 20 + count * 2
-                }</span></div>`
-            );
-            countRow === 4 && count !== 4 ? (zero = "0") : (zero = "");
-            selectBoard.append(
-                `<div id="cel-${
-                    82 - countRow * 20 + count * 2
-                }" class="odd-cel "><span class="odd-cel__number">${zero}${
-                    82 - countRow * 20 + count * 2
-                }</span></div>`
-            );
-        }
-    }
-};
-
-/**
  * make number of cells doesn't cover by snake
  */
 const startCel = [82, 61, 59, 45, 40, 34, 23, 19, 15, 13, 6, 3, 2, 1];
@@ -73,7 +29,6 @@ const allCell = () => {
         centering.includes(element) ? "centering" : element
     );
 
-    console.log(remain);
     return remain;
 };
 
@@ -178,5 +133,72 @@ const drawLine = ($startCell, $finishCell, rotate = "") => {
 
     $(`#line-${$startCell}-${$finishCell}`).css(style);
 };
+/**
+ * this function only created div for every cell and attach them to its container
+ */
+const initialCellBoard = () => {
+    let zero = "";
 
-export { initialCellBoard, positionCelNumbers, allCell, drawLine };
+    for (let countRow = 0; countRow < 5; countRow++) {
+        for (let count = 0; count < 5; count++) {
+            selectBoard.append(
+                `<div id="cel-${
+                    100 - countRow * 20 - count * 2
+                }" class="odd-cel "><span class="odd-cel__number">${
+                    100 - countRow * 20 - count * 2
+                }</span></div>`
+            );
+            selectBoard.append(
+                `<div id="cel-${
+                    99 - countRow * 20 - count * 2
+                }" class="even-cel "><span class="even-cel__number">${
+                    99 - countRow * 20 - count * 2
+                }</span></div>`
+            );
+        }
+        for (let count = 0; count < 5; count++) {
+            countRow === 4 ? (zero = "0") : (zero = "");
+            selectBoard.append(
+                `<div id="cel-${
+                    81 - countRow * 20 + count * 2
+                }" class="even-cel "><span class="even-cel__number">${zero}${
+                    81 - countRow * 20 + count * 2
+                }</span></div>`
+            );
+            countRow === 4 && count !== 4 ? (zero = "0") : (zero = "");
+            selectBoard.append(
+                `<div id="cel-${
+                    82 - countRow * 20 + count * 2
+                }" class="odd-cel "><span class="odd-cel__number">${zero}${
+                    82 - countRow * 20 + count * 2
+                }</span></div>`
+            );
+        }
+    }
+    /**
+     * chose where the ladder placed
+     */
+    drawLine(3, 60, "left-ladder");
+    drawLine(6, 27, "right-ladder");
+    drawLine(11, 70, "vertical");
+    drawLine(35, 56, "left-ladder");
+    drawLine(68, 93, "vertical");
+    drawLine(64, 99, "left-ladder");
+    /**
+     * chose where the snake placed
+     */
+    drawLine(37, 1, "right-snake");
+    drawLine(25, 5, "vertical");
+    drawLine(47, 9, "left-snake");
+    drawLine(65, 59, "right-snake");
+    drawLine(87, 54, "vertical");
+    drawLine(96, 61, "right-snake");
+    drawLine(92, 69, "vertical");
+
+    /**
+     * change position of number to dont covered by snake and latter
+     */
+    positionCelNumbers(allCell());
+};
+
+export { initialCellBoard as default };
