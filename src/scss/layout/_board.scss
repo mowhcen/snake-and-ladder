@@ -49,6 +49,12 @@
         align-items: flex-start;
         justify-content: end;
     }
+
+    &--centering {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .even-cel {

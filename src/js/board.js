@@ -48,14 +48,12 @@ const initialCellBoard = () => {
 /**
  * make number of cells doesn't cover by snake
  */
-const startCel = [];
-// [
-//     84, 87, 78, 51, 50, 31, 79, 30, 45, 27, 17, 36, 41, 40, 34, 11, 14, 7, 2,
-// ];
-const endCel = [];
-//  [19, 22, 77];
-const endEndCel = [];
-//  [13, 59];
+const startCel = [82, 61, 59, 45, 40, 34, 23, 19, 15, 13, 6, 3, 2, 1];
+const endCel = [78, 41, 22, 11];
+
+const endEndCel = [84, 68];
+
+const centering = [51, 50, 31, 30];
 
 const allCell = () => {
     let remain = [];
@@ -71,7 +69,11 @@ const allCell = () => {
     remain = remain.map((element) =>
         endEndCel.includes(element) ? "end-end" : element
     );
+    remain = remain.map((element) =>
+        centering.includes(element) ? "centering" : element
+    );
 
+    console.log(remain);
     return remain;
 };
 
@@ -87,6 +89,8 @@ const positionCelNumbers = (filter) => {
             $(`#cel-${count}`).addClass("cel--end");
         } else if (filter[count - 1] === "end-end") {
             $(`#cel-${count}`).addClass("cel--end-end");
+        } else if (filter[count - 1] === "centering") {
+            $(`#cel-${count}`).addClass("cel--centering");
         } else {
             $(`#cel-${count}`).addClass("cel--start-end");
         }
