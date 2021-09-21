@@ -17,7 +17,9 @@ initialCellBoard();
  * by calling this function game will start running
  */
 initialGame();
+/**
+ * active drop down and functionality
+ */
+dropDown();
 
 roleDice();
-
-dropDown();

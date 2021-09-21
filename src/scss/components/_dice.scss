@@ -1,15 +1,16 @@
-.dice-show {
-    padding: 2rem;
+.dice-color {
+    fill: var(--font-color);
+    height: 5rem;
+    width: 5rem;
     background-color: var(--secondary);
-    width: 4rem;
-    height: 4rem;
+    border: 0.3rem solid var(--secondary);
+    border-radius: 15px;
+    box-shadow: var(--box-shadow-input);
+}
+
+#dice-show {
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
-    font-weight: 900;
-    border-radius: 15px;
-    color: var(--font-color);
-    box-shadow: var(--box-shadow-input);
 }
