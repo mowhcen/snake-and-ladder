@@ -2,8 +2,7 @@
  * import exported functions in other js files into main
  */
 
-import { choseColor, dropDown } from "./dropdown";
-
+import dropDown from "./dropdown";
 import initialCellBoard from "./board";
 import initialGame from "./input";
 import roleDice from "./dice";
@@ -22,5 +21,3 @@ initialGame();
 roleDice();
 
 dropDown();
-
-choseColor();

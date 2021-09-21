@@ -1,30 +1,39 @@
 "use strick";
 
-import { colorSaver } from "./dropdown";
 import message from "./message";
 import { start } from "./move";
 
-let limit = 0;
 const selectInputSubmit = $("#initial-game");
 const selectInputCount = $("#count-player");
 const selectInputNaming = $("#name-player");
 const selectInputReset = $("#reset-page");
+const selectFormGetName = $("#get-info");
+const selectRedRadio = $("#check-red");
+const selectGreenRadio = $("#check-green");
+const selectBlueRadio = $("#check-blue");
+const selectYellowRadio = $("#check-yellow");
 let $count = 0;
+let $limit = 0;
+let $color = "";
 
 const namingPlayer = (count) => {
-    selectInputNaming.on("change", (e) => {
-        limit++;
-        if (limit <= count) {
-            $(".player-container").append(`
-            <div class="player-list">
-                 <span class="player-name">${limit}. ${e.target.value}</span>
-                 <figure class="mead__pick mead__color--${colorSaver()}"></figure>
-            </div>
-            `);
+    $(".radio").on("change", (e) => {
+        if (e.target.checked) {
+            $color = e.target.value;
+            console.log($color);
+        }
+    });
+    selectFormGetName.on("submit", (element) => {
+        if ($limit <= count) {
+            $limit++;
+            $(".player-container").append(`<div class="player-list">
+                         <span class="player-name">${$limit}. ${selectInputNaming.val()}</span>
+                         <figure class="mead__pick mead__color--${$color}"></figure>
+                    </div>`);
         } else {
             return;
         }
-        e.target.value = "";
+        element.preventDefault();
     });
 };
 
