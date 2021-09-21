@@ -48,10 +48,14 @@
             background-color: var(--font-color);
         }
     }
+}
 
-    &__checkbox {
-        display: none;
-    }
+.radio {
+    display: none;
+}
+
+.radio:checked + .mead__pick {
+    border: 2px solid var(--font-color);
 }
 
 .show {
