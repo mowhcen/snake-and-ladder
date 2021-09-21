@@ -2,12 +2,19 @@
 
 const selectDiceButton = $("#dice");
 const selectDiceShow = $("#dice-show");
+let $dice = 0;
 
 const getRandomInt = (min, max) => {
     const random = Math.random() * (max - min) + min;
 
     return Math.floor(random);
 };
+
+const setDiceNumber = (dice) => {
+    $dice = dice;
+};
+
+const getDiceNumber = () => $dice;
 
 const roleDice = () => {
     selectDiceButton.on("click", () => {
@@ -20,6 +27,7 @@ const roleDice = () => {
                     fill-opacity="1"></path>
             </g>
         </svg>`);
+            setDiceNumber(randomNumber);
         } else if (randomNumber === 2) {
             selectDiceShow.html(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="dice-color">
             <g transform="translate(0,0)">
@@ -28,6 +36,7 @@ const roleDice = () => {
                     fill-opacity="1"></path>
             </g>
         </svg>`);
+            setDiceNumber(randomNumber);
         } else if (randomNumber === 3) {
             selectDiceShow.html(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="dice-color">
             <g transform="translate(0,0)">
@@ -36,6 +45,7 @@ const roleDice = () => {
                     fill-opacity="1"></path>
             </g>
         </svg>`);
+            setDiceNumber(randomNumber);
         } else if (randomNumber === 4) {
             selectDiceShow.html(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="dice-color">
             <g transform="translate(0,0)">
@@ -44,6 +54,7 @@ const roleDice = () => {
                     fill-opacity="1"></path>
             </g>
         </svg>`);
+            setDiceNumber(randomNumber);
         } else if (randomNumber === 5) {
             selectDiceShow.html(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="dice-color">
             <g transform="translate(0,0)">
@@ -52,6 +63,7 @@ const roleDice = () => {
                     fill-opacity="1"></path>
             </g>
         </svg>`);
+            setDiceNumber(randomNumber);
         } else if (randomNumber === 6) {
             selectDiceShow.html(` <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="dice-color">
             <g transform="translate(0,0)">
@@ -60,7 +72,9 @@ const roleDice = () => {
                     fill-opacity="1"></path>
             </g>
         </svg>`);
+            setDiceNumber(randomNumber);
         }
     });
 };
-export { roleDice as default };
+
+export { roleDice, setDiceNumber, getDiceNumber };

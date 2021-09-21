@@ -41,7 +41,8 @@ const namingPlayer = (counter) => {
                 message("input");
             }
 
-            $(".player-container").append(`<div class="player-list">
+            $(".player-container")
+                .append(`<div id="player${$limit}" class="player-list">
                          <span class="player-name">${
                              $limit + 1
                          }. ${$name}</span>
