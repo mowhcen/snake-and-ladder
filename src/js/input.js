@@ -8,30 +8,49 @@ const selectInputCount = $("#count-player");
 const selectInputNaming = $("#name-player");
 const selectInputReset = $("#reset-page");
 const selectFormGetName = $("#get-info");
-const selectRedRadio = $("#check-red");
-const selectGreenRadio = $("#check-green");
-const selectBlueRadio = $("#check-blue");
-const selectYellowRadio = $("#check-yellow");
+const selectRadios = $(".radio");
 let $count = 0;
 let $limit = 0;
+let $name = "";
 let $color = "";
+let colors = [];
+let names = [];
 
 const namingPlayer = (count) => {
-    $(".radio").on("change", (e) => {
+    selectRadios.on("change", (e) => {
         if (e.target.checked) {
             $color = e.target.value;
-            console.log($color);
         }
     });
+    selectInputNaming.on("change", (e) => {
+        $name = e.target.value;
+    });
+
     selectFormGetName.on("submit", (element) => {
-        if ($limit <= count) {
+        if (
+            $limit <= count &&
+            $color !== "" &&
+            !colors.includes($color) &&
+            $name !== "" &&
+            !names.includes($name)
+        ) {
             $limit++;
             $(".player-container").append(`<div class="player-list">
-                         <span class="player-name">${$limit}. ${selectInputNaming.val()}</span>
+                         <span class="player-name">${$limit}. ${$name}</span>
                          <figure class="mead__pick mead__color--${$color}"></figure>
                     </div>`);
-        } else {
-            return;
+            colors[count] = $color;
+            names[count] = $name;
+            start($color);
+            message("input");
+        } else if ($color === "") {
+            message("color");
+        } else if (colors.includes($color)) {
+            message("color-same");
+        } else if ($name === "") {
+            message("name");
+        } else if (names.includes($name)) {
+            message("name-same");
         }
         element.preventDefault();
     });
@@ -40,9 +59,7 @@ const namingPlayer = (count) => {
 const initialGame = () => {
     selectInputSubmit.on("submit", (element) => {
         $count = Number(selectInputCount.val());
-        console.log($count);
         if ($count > 0 && $count < 5) {
-            start();
             namingPlayer($count);
             selectInputCount.attr("disabled", "disabled");
             element.preventDefault();

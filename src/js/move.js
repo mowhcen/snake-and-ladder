@@ -1,16 +1,11 @@
 "use strick";
 
-const start = () => {
-    $(".mead-container").appendTo("#cel-1");
-    $(".mead-container").addClass("point--start point");
+const start = ($color) => {
+    $("#cel-1").append(
+        '<div id="start" class="mead-container point point--start"></div>'
+    );
 
-    // $("#blue").appendTo("#cel-2");
-    // $("#blue").addClass("point point--end");
-    // $("#yellow").appendTo("#cel-1");
-
-    // $("#green").appendTo("#cel-1");
-
-    // $("#red").appendTo("#cel-1");
+    $(`#${$color}`).appendTo("#start");
 };
 
 export { start };
