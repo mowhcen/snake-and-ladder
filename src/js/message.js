@@ -17,6 +17,8 @@ const message = (message) => {
         selectMessage.html("Please select a name for player!!");
     } else if (message === "name-same") {
         selectMessage.html("Can`t pick same name for different colors");
+    } else if (message === "full") {
+        selectMessage.html("All player input their names");
     }
 };
 

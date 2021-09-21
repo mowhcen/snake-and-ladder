@@ -16,7 +16,7 @@ let $color = "";
 let colors = [];
 let names = [];
 
-const namingPlayer = (count) => {
+const namingPlayer = (counter) => {
     selectRadios.on("change", (e) => {
         if (e.target.checked) {
             $color = e.target.value;
@@ -28,21 +28,29 @@ const namingPlayer = (count) => {
 
     selectFormGetName.on("submit", (element) => {
         if (
-            $limit <= count &&
+            $limit < counter &&
             $color !== "" &&
             !colors.includes($color) &&
             $name !== "" &&
             !names.includes($name)
         ) {
-            $limit++;
+            console.log($limit);
+            if ($limit + 1 === counter) {
+                message("full");
+            } else {
+                message("input");
+            }
+
             $(".player-container").append(`<div class="player-list">
-                         <span class="player-name">${$limit}. ${$name}</span>
+                         <span class="player-name">${
+                             $limit + 1
+                         }. ${$name}</span>
                          <figure class="mead__pick mead__color--${$color}"></figure>
                     </div>`);
-            colors[count] = $color;
-            names[count] = $name;
+            colors[$limit] = $color;
+            names[$limit] = $name;
+            $limit++;
             start($color);
-            message("input");
         } else if ($color === "") {
             message("color");
         } else if (colors.includes($color)) {
@@ -52,6 +60,7 @@ const namingPlayer = (count) => {
         } else if (names.includes($name)) {
             message("name-same");
         }
+        selectInputNaming.val("");
         element.preventDefault();
     });
 };
@@ -61,6 +70,7 @@ const initialGame = () => {
         $count = Number(selectInputCount.val());
         if ($count > 0 && $count < 5) {
             namingPlayer($count);
+            console.log($count);
             selectInputCount.attr("disabled", "disabled");
             element.preventDefault();
             message("start");
