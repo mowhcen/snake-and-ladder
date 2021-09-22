@@ -7,16 +7,26 @@ import { move } from "./move";
 
 const selectTurnShow = $("#turn-show");
 let $count = 0;
-
 let $current = [1, 1, 1, 1];
+
+const winner = (names, index) => {
+    alert(`congratulations!!!!  ${names[index]}`);
+    location.reload();
+};
 
 const reOrderList = (dice) => {
     let color = getColors();
     let count = getCount();
     let player = dice.length % count;
 
-    console.log(player);
-    move($current[player], dice[dice.length - 1], color[player]);
+    $current[player] = move(
+        $current[player],
+        dice[dice.length - 1],
+        color[player]
+    );
+    if ($current[player] === 100) {
+        winner(getNames(), player);
+    }
 };
 
 const showTurnMessage = () => {
