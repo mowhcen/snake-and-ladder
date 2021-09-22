@@ -18,7 +18,13 @@ const message = (message) => {
     } else if (message === "name-same") {
         selectMessage.html("Can`t pick same name for different colors");
     } else if (message === "full") {
-        selectMessage.html("All player input their names");
+        selectMessage.html(
+            "All player input their names dice to set your turn"
+        );
+    } else if (message === "turn-give") {
+        selectMessage.html("dice to set your turn");
+    } else if (message === "next") {
+        selectMessage.html("next Player");
     }
 };
 

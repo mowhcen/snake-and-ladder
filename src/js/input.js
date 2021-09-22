@@ -1,6 +1,7 @@
 "use strick";
 
 import message from "./message";
+import { showTurnMessage } from "./turn";
 import { start } from "./move";
 
 const selectInputSubmit = $("#initial-game");
@@ -15,6 +16,24 @@ let $name = "";
 let $color = "";
 let colors = [];
 let names = [];
+
+const getCount = () => $count;
+
+const setCount = (count) => {
+    $count = count;
+};
+
+const getColors = () => colors;
+
+const setColors = (color) => {
+    colors.push(color);
+};
+
+const getNames = () => names;
+
+const setNames = (name) => {
+    names.push(name);
+};
 
 const namingPlayer = (counter) => {
     selectRadios.on("change", (e) => {
@@ -34,23 +53,22 @@ const namingPlayer = (counter) => {
             $name !== "" &&
             !names.includes($name)
         ) {
-            console.log($limit);
-            if ($limit + 1 === counter) {
-                message("full");
-            } else {
-                message("input");
-            }
-
             $(".player-container").append(`<div class="player-list">
                          <span class="player-name">${
                              $limit + 1
                          }. ${$name}</span>
                          <figure class="mead__pick mead__color--${$color}"></figure>
                     </div>`);
-            colors[$limit] = $color;
-            names[$limit] = $name;
+            setColors($color);
+            setNames($name);
             $limit++;
             start($color);
+            if ($limit === counter) {
+                message("full");
+                showTurnMessage();
+            } else {
+                message("input");
+            }
         } else if ($color === "") {
             message("color");
         } else if (colors.includes($color)) {
@@ -67,10 +85,9 @@ const namingPlayer = (counter) => {
 
 const initialGame = () => {
     selectInputSubmit.on("submit", (element) => {
-        $count = Number(selectInputCount.val());
+        setCount(Number(selectInputCount.val()));
         if ($count > 0 && $count < 5) {
             namingPlayer($count);
-            console.log($count);
             selectInputCount.attr("disabled", "disabled");
             element.preventDefault();
             message("start");
@@ -85,4 +102,4 @@ const initialGame = () => {
     });
 };
 
-export { initialGame as default };
+export { initialGame, getNames, getColors, getCount };
