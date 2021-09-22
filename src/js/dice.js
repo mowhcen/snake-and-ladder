@@ -1,5 +1,7 @@
 "use strick";
 
+import { getCount, getNames } from "./input";
+
 import { turnOrder } from "./turn";
 
 const selectDiceButton = $("#dice");
@@ -13,7 +15,9 @@ const getRandomInt = (min, max) => {
 };
 
 const setDiceNumber = (dice) => {
-    $dice.push(dice);
+    if (getCount() !== 0 && getCount() === getNames().length) {
+        $dice.push(dice);
+    }
 };
 
 const getDiceNumber = () => $dice;
@@ -83,7 +87,9 @@ const roleDice = () => {
                 setDiceNumber(randomNumber);
                 break;
         }
-        turnOrder(getDiceNumber());
+        if (getCount() !== 0 && getCount() === getNames().length) {
+            turnOrder(getDiceNumber());
+        }
     });
 };
 
