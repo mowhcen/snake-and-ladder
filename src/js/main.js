@@ -3,7 +3,7 @@
  */
 
 import dropDown from "./dropdown";
-import initialCellBoard from "./board";
+import { initialCellBoard } from "./board";
 import { initialGame } from "./input";
 import { roleDice } from "./dice";
 

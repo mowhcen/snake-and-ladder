@@ -1,8 +1,7 @@
 "use strick";
 
-import { showTurnMessage, turnOrder } from "./turn";
-
 import message from "./message";
+import { showTurnMessage } from "./turn";
 import { start } from "./move";
 
 const selectInputSubmit = $("#initial-game");
@@ -54,12 +53,10 @@ const namingPlayer = (counter) => {
             $name !== "" &&
             !names.includes($name)
         ) {
-            console.log($limit);
-
             $(".player-container").append(`<div class="player-list">
-                         <span id="player${$limit}" class="player-name">${
-                $limit + 1
-            }. ${$name}</span>
+                         <span class="player-name">${
+                             $limit + 1
+                         }. ${$name}</span>
                          <figure class="mead__pick mead__color--${$color}"></figure>
                     </div>`);
             setColors($color);
