@@ -20,36 +20,65 @@
             <h1 class="title title--big">Snake and Ladder</h1>
             <h6 class="creator">Created by: mowhcen</h6>
         </div>
-        <div class="initial-game">
-            <button class="start-button">Start</button>
+        <form id="initial-game" class="initial-game">
+            <input type="submit" class="start-button" value="Start">
             <h6 class="player-count">Player count:</h6>
-            <input type="text" class="count">
-            <button class="reset-game">Reset Game</button>
-        </div>
+            <input type="text" id="count-player" class="count" maxlength="1">
+            <input type="reset" id="reset-page" class="reset-game" value="Reset Game">
+        </form>
         <div class="board">
         </div>
         <div class="showing-turn">
-            <button class="dice">Dice</button>
-            <div class="dice-show">
-                image of dice
+            <button id="dice" class="dice">Dice</button>
+            <div id="dice-show">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="dice-color">
+                    <g transform="translate(0,0)">
+                        <path
+                            d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM122 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zm268 0a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z"
+                            fill-opacity="1"></path>
+                    </g>
+                </svg>
             </div>
-            <div class="turn-show">
-                Mohsen
+            <div id="turn-show" class="turn-show">
+                Player
             </div>
-            <h3 class="turn"> Turn</h3>
+            <h3 class=" turn">Turn</h3>
         </div>
         <div class="initial-player">
             <h3 class="title title--medium">Input Players name:</h3>
-            <input class="get-player" type="text">
+            <form id="get-info" class="get-name-container">
+                <input class="get-player" id="name-player" type="text">
+                <div class="get-color">
+                    <div class="get-color__icon"></div>
+                    <div class="drop-down">
+                        <div class="drop-down__item">
+                            <input type="radio" value="red" class="radio" name="color" id="check-red">
+                            <label for="check-red" class="mead__pick mead__color--red"></label>
+                        </div>
+                        <div class="drop-down__item">
+                            <input type="radio" value="green" class="radio" name="color" id="check-green">
+                            <label for="check-green" class="mead__pick mead__color--green"></label>
+                        </div>
+                        <div class="drop-down__item">
+                            <input type="radio" value="yellow" class="radio" name="color" id="check-yellow">
+                            <label for="check-yellow" class="mead__pick mead__color--yellow"></label>
+                        </div>
+                        <div class="drop-down__item">
+                            <input type="radio" value="blue" class="radio" name="color" id="check-blue">
+                            <label for="check-blue" class="mead__pick mead__color--blue"></label>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Add" class="add-button">
+            </form>
             <h3 class="title title--small">Players</h3>
-            <div class="player-list">
-                <span class="player-name">1. Mohsen</span>
-                <figure class="mead__head mead__color--red"></figure>
+            <div class="player-container">
             </div>
-            <div class="player-list">
-                <span class="player-name">2. Javad</span>
-                <figure class="mead__head mead__color--green"></figure>
-            </div>
+        </div>
+        <div class="message">
+            <p id="message" class="show-message">
+                Please enter ther player count and press start
+            </p>
         </div>
         <div class="mead-container">
             <div id="red" class="mead-contain">

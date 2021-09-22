@@ -1,11 +1,16 @@
+@import "./abstracts/animations";
 @import "./abstracts/variables";
 
 @import "./base/base";
 @import "./base/typography";
 
+@import "components/dice";
 @import "components/buttons";
 @import "components/inputs";
 @import "components/meads";
+@import "components/message";
+@import "components/move";
+@import "components/dropdown";
 
 @import "./layout/layout";
 @import "./layout/board";

@@ -19,7 +19,6 @@
 .initial-player {
     display: flex;
     flex-direction: column;
-    padding: 0rem 2rem;
 }
 
 .player-list {
@@ -33,6 +32,9 @@
     grid-row: footer-part / -1;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     margin: auto;
 }
 
@@ -40,5 +42,20 @@
     display: flex;
     flex-direction: column;
     justify-items: center;
+    align-items: center;
+    margin-bottom: 0.5vh;
+}
+
+.message {
+    grid-column: begin / begin;
+    grid-row: footer-part / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.get-name-container {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }

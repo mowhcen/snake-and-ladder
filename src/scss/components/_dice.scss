@@ -1,0 +1,16 @@
+.dice-color {
+    fill: var(--font-color);
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--secondary);
+    border: 0.3rem solid var(--secondary);
+    border-radius: 15px;
+    box-shadow: var(--box-shadow-input);
+}
+
+#dice-show {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

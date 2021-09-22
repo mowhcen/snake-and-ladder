@@ -8,10 +8,12 @@
     color: var(--font-color);
     margin: auto;
     border-radius: 50%;
+
     background-color: var(--secondary);
     border: 1px solid var(--shadow-color);
     box-shadow: var(--box-shadow);
     cursor: pointer;
+    transition: all 0.2s;
 
     &:active {
         box-shadow: var(--box-shadow-press);
@@ -33,7 +35,7 @@
     border: 1px solid var(--shadow-color);
     box-shadow: var(--box-shadow);
     cursor: pointer;
-
+    transition: all 0.2s;
     &:active {
         box-shadow: var(--box-shadow-press);
     }
@@ -56,6 +58,25 @@
     border: 2px solid var(--shadow-color);
     box-shadow: var(--box-shadow);
     cursor: pointer;
+    transition: all 0.2s;
+    &:active {
+        box-shadow: var(--box-shadow-press);
+    }
+}
+
+.add-button {
+    width: fit-content;
+    height: 2rem;
+    font-weight: 700;
+    padding: 0.2rem;
+    color: var(--font-color);
+    margin-left: 0.5rem;
+
+    background-color: var(--secondary);
+    border: 1px solid var(--shadow-color);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.2s;
 
     &:active {
         box-shadow: var(--box-shadow-press);

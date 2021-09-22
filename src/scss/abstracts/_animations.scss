@@ -1,0 +1,79 @@
+@keyframes moveRightOne {
+    from {
+        transform: translateX(0vh);
+    }
+
+    to {
+        transform: translateX(10vh);
+    }
+}
+@keyframes moveLeftOne {
+    from {
+        transform: translateX(0vh);
+    }
+
+    to {
+        transform: translateX(-10vh);
+    }
+}
+@keyframes moveUp {
+    from {
+        transform: translateY(0vh);
+    }
+
+    to {
+        transform: translateY(-10vh);
+    }
+}
+@keyframes snakeOne {
+    from {
+        transform: translate(0vh, 0vh);
+    }
+    15% {
+        transform: translate(-5vh, 3vh);
+    }
+    20% {
+        transform: translate(-6vh, 1.5vh);
+    }
+    55% {
+        transform: translate(-15vh, 15vh);
+    }
+    65% {
+        transform: translate(-20vh, 13vh);
+    }
+    70% {
+        transform: translate(-22vh, 13vh);
+    }
+    80% {
+        transform: translate(-25vh, 22vh);
+    }
+    90% {
+        transform: translate(-29vh, 25vh);
+    }
+    to {
+        transform: translate(-30vh, 30vh);
+    }
+}
+@keyframes ladderClime {
+    from {
+        transform: translate(0vh, 0vh);
+    }
+    17% {
+        transform: translate(3.5vh, -5vh);
+    }
+    34% {
+        transform: translate(7vh, -10vh);
+    }
+    51% {
+        transform: translate(10.5vh, -15vh);
+    }
+    68% {
+        transform: translate(13.5vh, -20vh);
+    }
+    85% {
+        transform: translate(17vh, -25vh);
+    }
+    to {
+        transform: translate(20vh, -30vh);
+    }
+}

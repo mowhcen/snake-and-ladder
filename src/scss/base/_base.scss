@@ -8,6 +8,20 @@
 
 html {
     font-size: 100%;
+
+    @media (max-width: 1300px) {
+        font-size: 90%;
+    }
+    @media (max-width: 1200px) {
+        font-size: 80%;
+    }
+    @media (max-width: 1000px) {
+        font-size: 70%;
+    }
+
+    @media (max-width: 800px) {
+        font-size: 60%;
+    }
 }
 
 body {
