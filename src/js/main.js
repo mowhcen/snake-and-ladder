@@ -4,7 +4,7 @@
 
 import dropDown from "./dropdown";
 import initialCellBoard from "./board";
-import initialGame from "./input";
+import { initialGame } from "./input";
 import { roleDice } from "./dice";
 
 // import sampleMove from "./move";
