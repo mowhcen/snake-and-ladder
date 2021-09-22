@@ -32,6 +32,26 @@ const allCell = () => {
     return remain;
 };
 
+const snakeCell = [
+    { start: 37, finish: 1 },
+    { start: 25, finish: 5 },
+    { start: 47, finish: 9 },
+    { start: 65, finish: 59 },
+    { start: 87, finish: 54 },
+    { start: 92, finish: 69 },
+    { start: 96, finish: 61 },
+];
+const ladderCell = [
+    { start: 3, finish: 60 },
+    { start: 6, finish: 27 },
+    { start: 11, finish: 70 },
+    { start: 35, finish: 56 },
+    { start: 64, finish: 99 },
+    { start: 68, finish: 93 },
+];
+/** */
+const getLadderCell = () => ladderCell;
+const getSnakeCell = () => snakeCell;
 /**
  * this add class to position number cell as flex
  * @param {*} filter get return value of all cell: ;
@@ -201,4 +221,4 @@ const initialCellBoard = () => {
     positionCelNumbers(allCell());
 };
 
-export { initialCellBoard as default };
+export { initialCellBoard, getLadderCell, getSnakeCell };
